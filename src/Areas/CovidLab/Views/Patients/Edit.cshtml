@@ -1,0 +1,108 @@
+﻿@model LIVESTOCK.Areas.CovidLab.Models.Patient
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row" style="margin:20px">
+    <form asp-action="Edit">
+        <h4 class="text-center" style="font-weight:bold;margin-bottom:10px">Edit Patient Information Form</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CreatedDate" />
+                <input type="hidden" asp-for="PatientID" />
+                <input type="hidden" asp-for="LabID" />
+                <input type="hidden" asp-for="TotalTestConducted" />
+                <input type="hidden" asp-for="CreatedBy" />
+                <input type="hidden" asp-for="Status" />
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="FatherHusbandName" class="control-label"></label>
+                    <input asp-for="FatherHusbandName" class="form-control" />
+                    <span asp-validation-for="FatherHusbandName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Code" class="control-label"></label>
+                    <input asp-for="Code" class="form-control" />
+                    <span asp-validation-for="Code" class="text-danger"></span>
+                </div>
+            </div>           
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="DistrictID" class="control-label"></label>
+                    <select asp-for="DistrictID" class="form-control" asp-items="ViewBag.DistrictID"></select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="MobileNo" class="control-label"></label>
+                    <input asp-for="MobileNo" class="form-control" />
+                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="CNIC" class="control-label"></label>
+                    <input asp-for="CNIC" class="form-control" />
+                    <span asp-validation-for="CNIC" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Profession" class="control-label"></label>
+                    <input asp-for="Profession" class="form-control" />
+                    <span asp-validation-for="Profession" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="DOS" class="control-label"></label>
+                    <input asp-for="DOS" class="form-control" />
+                    <span asp-validation-for="DOS" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="Gender" class="control-label"></label>
+                    <select asp-for="Gender" class="form-control" asp-items="ViewBag.ddList"></select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-1" style="padding:0">
+                <div class="form-group" style="margin-top:25px">
+                    <input type="submit" value="Submit" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+        <a asp-action="Create">Back to List</a>
+    </form>
+</div>

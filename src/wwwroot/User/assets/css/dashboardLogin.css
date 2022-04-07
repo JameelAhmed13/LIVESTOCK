@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fdfdfd;
+}
+
+.fixed-header {
+    background-color: #fdfdfd;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.topnav {
+    background: #efefef;
+}
+
+.head h3 {
+    color: #2e5395;
+    font-size: 1.6rem;
+}
+
+.head p {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.head2 legend {
+    color: #2e5395;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.main-text h5,
+.main-text b {
+    color: #28a745;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-text p {
+    font-size: 15px;
+}
+
+.first-paragraph h5 {
+    color: #28a745;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main {
+    margin-top: 190px;
+}
+
+footer p {
+    font-weight: 500;
+}
+
+.btn-outline-blue {
+    color: #2e5395;
+}
+
+.btn-blue {
+    color: #fff;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #2e5395;
+}
+
+.sub-head{
+    color:#2e5395;
+}
+
+.btn-outline-blue {
+    color: #2e5395;
+    border-color: #2e5395;
+}
+
+.btn-outline-blue:hover,
+.btn-outline-blue:focus {
+    color: #fff;
+    border-color: #2e5395;
+    background-color: #2e5395;
+}
+
+.img-login{
+    cursor:pointer;
+}

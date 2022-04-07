@@ -1,0 +1,258 @@
+﻿
+
+<div class="box-header with-border">   
+    <div class="col-lg-12">
+        <h4 class="text-center" style="font-weight:bold">Dashboard: Covid-19 Lab Summary Report</h4>
+    </div>  
+</div>
+
+<section class="content">
+
+    <div>
+        <div class="row">
+            @*Potential*@
+            <div class="col-md-3">
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <span class="label label-warning pull-right"> @ViewBag.TotalTest</span>
+                        <h3 class="box-title"> Total Tests Conducted</h3>
+                    </div>
+                    <div class="box-body" style="padding:0 10px 0 10px">
+                        <h1 class="no-margins">@ViewBag.TotalTest<img src="/img/corona-Logo2.gif" width="120" height="50" /></h1>
+                    </div>
+                </div>
+            </div>
+            @*Feeder*@
+            <div class="col-md-3">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <span class="label label-info pull-right">@ViewBag.Nagitive</span>
+                        <h3 class="box-title"> Negitive Cases</h3>
+                    </div>
+                    <div class="box-body" style="padding:0 10px 0 10px">
+                        <h1 class="no-margins">@ViewBag.Nagitive<img src="/img/corona-Logo2.gif" width="120" height="50" /></h1>
+                    </div>
+                </div>
+            </div>
+            @*Next Level*@
+            <div class="col-md-3">
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <span class="label label-danger pull-right">@ViewBag.Positive</span>
+                        <h3 class="box-title"> Positive Cases</h3>
+                    </div>
+                    <div class="box-body" style="padding:0 10px 0 10px">
+                        <h1 class="no-margins">@ViewBag.Positive<img src="/img/corona-Logo2.gif" width="120" height="50" /></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <span class="label label-success pull-right"> @ViewBag.Pending</span>
+                        <h3 class="box-title"> Pending Results</h3>
+                    </div>
+                    <div class="box-body" style="padding:0 10px 0 10px">
+                        <h1 class="no-margins">@ViewBag.Pending<img src="/img/corona-Logo2.gif" width="120" height="50" /></h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
+
+        <div class="row">
+
+
+            @*School Facilities*@
+            <div class="col-lg-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h5>
+                            Covid-19 Test Results
+                        </h5>
+                    </div>
+                    <div ibox-tools></div>
+                    <div class="box-body">
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <canvas id="doughnutChart" height="200"></canvas>
+                                </div>
+                                <div id="my-doughnut-legend" class="col-lg-4">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                </div>
+
+            </div>
+            @*Student with Furnitures*@
+            <div class="col-lg-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h5>
+                            Bar Chart
+                        </h5>
+                    </div>
+                    <div class="box-body">
+                        <div>
+                            <canvas id="barChartFurni" height="143"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/libs/flot/jquery.flot.min.js"></script>
+    <script src="~/libs/chart.js/Chart.min.js"></script>
+    @*<script src="~/libs/jquery.peity/jquery.peity.min.js"></script>*@
+    @* @Scripts.Render("~/plugins/peity")*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // Furnitures with Students
+            // #region PTSMC
+        var barDataFurni = {
+            labels: ["Pending","Positive","Nagitive"],
+            datasets: [
+                {
+                    label: "Teachers",
+                    fillColor: "rgba(6, 86, 166,0.5)",
+                    strokeColor: "rgba(6, 86, 166,0.8)",
+                    highlightFill: "rgba(6, 86, 166,0.75)",
+                    highlightStroke: "rgba(6, 86, 166,1)",
+                        data: [@ViewBag.Pending,@ViewBag.Nagitive,@ViewBag.Positive]
+        },
+    ]
+    };
+
+    var barOptionsFurni = {
+        scaleBeginAtZero: true,
+        scaleShowGridLines: true,
+        scaleGridLineColor: "rgba(0,0,0,.05)",
+        scaleGridLineWidth: 1,
+        barShowStroke: true,
+        barStrokeWidth: 2,
+        barValueSpacing: 5,
+        barDatasetSpacing: 1,
+        responsive: true,
+        multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
+    }
+
+
+    var ctx = document.getElementById("barChartFurni").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(barDataFurni, barOptionsFurni);
+
+        });
+
+        // School Facilities
+        var doughnutData = [
+            {  value: @ViewBag.Pending ,         color: "#a3e1d4", highlight: "#1ab394", label: "Pending"},
+            {  value: @ViewBag.Positive,           color: "#dede6e", highlight: "#1ab394", label: "Positive" },
+            {  value: @ViewBag.Nagitive,               color: "#b578cf", highlight: "#1ab394", label: "Negitive" },
+    ];
+
+    var doughnutOptions = {
+        segmentShowStroke: true,
+        segmentStrokeColor: "#fff",
+        segmentStrokeWidth: 2,
+        percentageInnerCutout: 45, // This is 0 for Pie charts
+        animationSteps: 100,
+        animationEasing: "easeOutBounce",
+        animateRotate: true,
+        animateScale: false,
+        responsive: true,
+        legend: true,
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"comm-how\"><%=segments[i].value%>%</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    };
+
+
+    //var ctx = document.getElementById("doughnutChart").getContext("2d");
+    //var myDoughnut = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
+    //var legendHolder = document.createElement('div');
+    //legendHolder.innerHTML = race.generateLegend();
+    window.onload = function(){
+        var ctx = document.getElementById("doughnutChart").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+            responsive : true,
+            animationEasing: "easeOutQuart",
+            tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+            segmentStrokeColor : "#f9f9f9",
+            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"comm-how\"><%=segments[i].value%>:</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+        });
+        var legendHolder = document.getElementById('my-doughnut-legend')
+        legendHolder.innerHTML = myDoughnut.generateLegend();
+        // Include a html legend template after the module doughnut itself
+        //helpers.each(legendHolder.firstChild.childNodes, function(legendNode, index){
+        //    helpers.addEvent(legendNode, 'mouseover', function(){
+        //        var activeSegment = myDoughnut.segments[index];
+        //        activeSegment.save();
+        //        activeSegment.fillColor = activeSegment.highlightColor;
+        //        myDoughnut.showTooltip([activeSegment]);
+        //        activeSegment.restore();
+        //    });
+        //});
+        //helpers.addEvent(legendHolder.firstChild, 'mouseout', function(){
+        //    myDoughnut.draw();
+        //});
+        //canvas.parentNode.parentNode.appendChild(legendHolder.firstChild);
+
+
+        //myDoughnut.generateLegend();
+        //document.getElementById('my-doughnut-legend').innerHTML = myDoughnut.generateLegend();
+    };
+    </script>
+}
+
+<style type="text/css">
+    #canvas-holder {
+        width: 240px;
+    }
+
+    .doughnut-legend li span {
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        float: left;
+        margin-top: 4px;
+        margin-right: 8px;
+    }
+
+    .doughnut-legend {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        margin-top: 0px;
+    }
+
+        .doughnut-legend li {
+            margin-bottom: 4px;
+        }
+
+            .doughnut-legend li:first-letter {
+                text-transform: capitalize;
+            }
+
+    .comm-how {
+        display: inline-block;
+        float: left;
+        color: #979797;
+        width: 25px;
+        text-align: right;
+        margin-right: 10px;
+    }
+</style>

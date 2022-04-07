@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Balochistan">
+    <meta name="author" content="BPPRA">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate-css/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/color_skins.css">
+    <link rel="stylesheet" href="assets/css/style.Css">
+
+    <script src="https://kit.fontawesome.com/b609505ebe.js" crossorigin="anonymous"></script>
+    
+</head>
+<body class="theme-blue">
+  
+<!-- <header class="form-header ">
+  <div class="container-fluid" style="background-color:#f2f2f2">
+  <div class="content-wrapper" style="margin-top:65px;margin-bottom:10px">
+      <div class="row">
+
+          <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3">
+              <img src="assets/images/AHIS-logo.png" width="100" height="80" style="margin-top:5px" />
+          </div>
+          <div class="col-md-8  col-sm-6 col-lg-8 col-xs-6 text">
+              <div class="text-center">
+                  <h3>Livestock &amp; Dairy Development Department</h3>
+                  <p class="display-4" style="font-size:18px;color:black"><b>GOVERNMENT OF BALOCHISTAN</b> </p>
+              </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-lg-2 col-xs-3 form-img" style="margin-top:5px; margin-bottom: 5px;"><img src="assets/images/logo.png" width="100" height="80" /></div>
+      </div>
+  </div>
+</div>
+</header> -->
+ <!-- Page Loader -->
+ <div class="page-loader-wrapper" style="opacity:.9">
+  <div class="loader">
+      <div class="m-t-30"><img src="assets/images/AHIS-logo.png" width="100" height="100" alt="AHIS"></div>
+      <p>&nbsp; Please wait...</p>
+  </div>
+</div>
+<!-- Overlay For Sidebars -->
+<div class="overlay" style="display: none;"></div>
+<div id="wrapper">
+  <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-brand">
+              <a href="design.html">
+                  
+                  <span class="name">
+                      <!-- <img src="assets/images/AHIS-logo.png" width="40" height="40" alt=""> -->
+                      &nbsp; &nbsp; Livestock & Dairy <br> Development Department</span>
+              </a>
+          </div>
+          <div class="navbar-right">
+              <ul class="list-unstyled clearfix mb-0">
+                  <li>
+                      <div class="navbar-btn btn-toggle-show">
+                          <button type="button" class="btn-toggle-offcanvas"><i
+                                  class="lnr lnr-menu fa fa-bars"></i></button>
+                      </div>
+                      <a href="javascript:void(0);" class="btn-toggle-fullwidth btn-toggle-hide"><i
+                              class="fa fa-bars"></i></a>
+                  </li>
+                  <li>
+                      <form id="navbar-search" class="navbar-form search-form">
+                          <input value="" class="form-control" placeholder="Search here..." type="text">
+                          <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                      </form>
+                  </li>
+                  <li>
+                      <div id="navbar-menu">
+                          <ul class="nav navbar-nav">
+                              <li class="dropdown">
+                                  <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                      <i class="icon-bell"></i>
+                                      <span class="notification-dot"></span>
+                                  </a>
+                                  <ul class="dropdown-menu animated bounceIn notifications">
+                                      <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                      <li>
+                                          <a href="javascript:void(0);">
+                                              <div class="media">
+                                                  <div class="media-left">
+                                                      <i class="icon-info text-warning"></i>
+                                                  </div>
+                                                  <div class="media-body">
+                                                      <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                      <span class="timestamp">10:00 AM Today</span>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="javascript:void(0);">
+                                              <div class="media">
+                                                  <div class="media-left">
+                                                      <i class="icon-like text-success"></i>
+                                                  </div>
+                                                  <div class="media-body">
+                                                      <p class="text">Your New Campaign <strong>Holiday
+                                                              Sale</strong> is approved.</p>
+                                                      <span class="timestamp">11:30 AM Today</span>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="javascript:void(0);">
+                                              <div class="media">
+                                                  <div class="media-left">
+                                                      <i class="icon-pie-chart text-info"></i>
+                                                  </div>
+                                                  <div class="media-body">
+                                                      <p class="text">Website visits from Twitter is 27% higher than last week.</p>
+                                                      <span class="timestamp">04:00 PM Today</span>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="javascript:void(0);">
+                                              <div class="media">
+                                                  <div class="media-left">
+                                                      <i class="icon-info text-danger"></i>
+                                                  </div>
+                                                  <div class="media-body">
+                                                      <p class="text">Error on website analytics configurations
+                                                      </p>
+                                                      <span class="timestamp">Yesterday</span>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li class="footer"><a href="javascript:void(0);" class="more">See all
+                                              notifications</a></li>
+                                  </ul>
+                              </li>
+                              <li class="dropdown">
+                                  <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-flag"></i><span
+                                          class="notification-dot"></span></a>
+                                  <ul class="dropdown-menu animated bounceIn task">
+                                      <li class="header"><strong>Project</strong></li>
+                                      <li class="body">
+                                          <ul class="menu tasks list-unstyled">
+                                              <li>
+                                                  <a href="javascript:void(0);">
+                                                      <span class="text-muted">Clockwork Orange <span
+                                                              class="float-right">29%</span></span>
+                                                      <div class="progress">
+                                                          <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="javascript:void(0);">
+                                                      <span class="text-muted">Blazing Saddles <span
+                                                              class="float-right">78%</span></span>
+                                                      <div class="progress">
+                                                          <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="javascript:void(0);">
+                                                      <span class="text-muted">Project Archimedes <span
+                                                              class="float-right">45%</span></span>
+                                                      <div class="progress">
+                                                          <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="javascript:void(0);">
+                                                      <span class="text-muted">Eisenhower X <span
+                                                              class="float-right">68%</span></span>
+                                                      <div class="progress">
+                                                          <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="javascript:void(0);">
+                                                      <span class="text-muted">Oreo Admin Templates <span
+                                                              class="float-right">21%</span></span>
+                                                      <div class="progress">
+                                                          <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                                      </div>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="footer"><a href="javascript:void(0);">View All</a></li>
+                                  </ul>
+                              </li>
+
+                              <li class="dropdown">
+                                  <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                      <img class="rounded-circle" src="assets/images/AHIS-logo.png" width="30" alt="">
+                                  </a>
+                                  <div class="dropdown-menu animated flipInY user-profile">
+                                      <div class="d-flex p-3 align-items-center">
+                                          <div class="drop-left m-r-10">
+                                              <img src="assets/images/AHIS-logo.png" class="rounded" width="50" alt="">
+                                          </div>
+                                          <div class="drop-right">
+                                              <h4>Samuel Morriss</h4>
+                                              <p class="user-name">samuelmorris@info.com</p>
+                                          </div>
+                                      </div>
+                                      <div class="m-t-10 p-3 drop-list">
+                                          <ul class="list-unstyled">
+                                              <li><a href="page-profile.html"><i class="icon-user"></i>My
+                                                      Profile</a></li>
+                                              <li><a href="app-inbox.html"><i
+                                                          class="icon-envelope-open"></i>Messages</a></li>
+                                              <li><a href="javascript:void(0);"><i
+                                                          class="icon-settings"></i>Settings</a></li>
+                                              <li class="divider"></li>
+                                              <li><a href="page-login.html"><i class="icon-power"></i>Logout</a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </li>
+
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div id="leftsidebar" class="sidebar">
+
+      <div class="sidebar-scroll">
+          <nav id="leftsidebar-nav" class="sidebar-nav">
+              <ul id="main-menu" class="metismenu">
+                  <li class="heading">Main</li>
+                  <li class="active"><a href="design.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                  <li class="heading">Pages</li>
+                  <li class="">
+                      <a href="#" class="has-arrow"><i class="icon-user"></i><span>Registeration</span></a>
+                      <ul>
+                          <li><a href="cvh.html" ><span>Civil Veterinary Hospital</span></a></li>
+                          <li><a href="field-servay.html"><span>Field Servay</span></a></li>
+                          <li><a href="cvd.html"><span>Civil  Veterinary Dispensary</span></a></li>
+                          <li><a href="lab.html"><span>Laboratory</span></a></li>
+                      </ul>
+                  </li>
+                  <li class="">
+                    <a href="" class="has-arrow"><i class="icon-globe"></i><span>Master Data</span></a>
+                    <ul>
+                      <!-- <li><a href="Datafield.html" ><span>Datafield</span></a></li> -->
+                      <li><a href="country table.html"><span>Country</span></a></li>
+                      <li><a href="province table.html"><span>Province</span></a></li>
+                      <li><a href="division table.html"><span>Division</span></a></li>
+                      <li><a href="district table.html"><span>District</span></a></li>
+                      <li><a href="Tehsil table.html"><span>Tehsil</span></a></li>
+                      <li><a href="UC table.html"><span>Union Concil</span></a></li>
+                      <li><a href="Area table.html"><span>Area</span></a></li>
+    
+                    </ul>
+                </li>
+                  
+              </ul>
+          </nav>
+      </div>
+    </div>
+    
+    <div id="main-content">
+      <div class="container-fluid">
+          <div class="row clearfix mt-3">
+              <div class="col-12 ">
+                 <div class="card">
+                    <div class="form_holder">
+        <!-- <h2 class="fs-title" style="color:#000;">CVD</h2> -->
+                        <form id="msform">
+                        <ul id="progressbar">
+                            <li class="active">1. Farmer Information</li>
+                            <li>2. Farm Information</li>
+                            <li>3. Purpose Of Visit</li>
+                            <li>4. History Of Vaccination</li>
+                        </ul>
+                        <fieldset>
+                            <h2 class="fs-title">Create your account</h2>
+                            <h3 class="fs-subtitle">This is step 1</h3>
+                            <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Farmer Name</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">CNIC No.</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Contact Number</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Cordinates</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                </div> -->
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">Province</label>
+                                    <select class="form-control"  >
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">District</label>
+                                    <select class="form-control"  >
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">Division</label>
+                                    <select class="form-control"  >
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">Union Council</label>
+                                    <select class="form-control"  >
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">Area</label>
+                                    <select class="form-control"  >
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                <div class="form-group">
+                                    <label class="form-label pr-0">Adresss</label>
+                                    <textarea name="" class="form-control" id=""></textarea>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div style="float: left;">
+                            <button type="button" class="previous action-button"><a href="cvd.html" style="text-decoration: none; color: white;">Go Back</a></button>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                            
+                        </fieldset>
+                        <fieldset>
+                            <h3 class="fs-subtitle">Please Fill Required Field</h3>
+                            <div class="container">
+                            <legend><u> Farm Information </u></legend>
+                                <div class="row">
+                                <div class="col-12">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                                    <label class="form-check-label" for="check1">
+                                        Dairy
+                                    </label>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check2">
+                                    <label class="form-check-label" for="check2">
+                                        Breeding
+                                    </label>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check3">
+                                            <label class="form-check-label" for="check3">
+                                            Poultry
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check4">
+                                            <label class="form-check-label" for="check4">
+                                            Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" id="input-field-check4" class="form-control" style="display: none;" placeholder="Other">
+                                    </div>
+                                </div>
+                            </div>
+                                <hr>
+                                <legend><u> Animal Species </u></legend>
+                                <div class="row">
+                                    <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="cattle-check">
+                                        <label class="form-check-label" for="cattle-check">
+                                            Cattle
+                                        </label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="cattle-divchk" style="display: none;">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="buffalo-check">
+                                                <label class="form-check-label" for="buffalo-check">
+                                                Buffalo
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="buffalo-divchk" style="display: none;">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="sheep-check">
+                                                <label class="form-check-label" for="sheep-check">
+                                                Sheep
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="sheep-divchk" style="display: none;">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="goat-check">
+                                                <label class="form-check-label" for="goat-check">
+                                                Goat
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="goat-divchk" style="display: none;">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="poultry-check">
+                                                <label class="form-check-label" for="poultry-check">
+                                                Poultry
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="poultry-divchk" style="display: none;">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="isChecked">
+                                                <label class="form-check-label" for="isChecked">
+                                                Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row"  id="other-divChk" style="display: none">
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Other</label>
+                                            <input type="text" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Breeds</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Male Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="" class="form-label">Female Quantity</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">Purpose of Visit</h2>
+                            <!-- <h3 class="fs-subtitle">We will never sell it</h3> -->
+                            <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="animaltreatment-check">
+                                    <label class="form-check-label" for="animaltreatment-check">
+                                    Animal Treatment
+                                    </label>
+                                </div>
+                                </div>
+                                
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check7">
+                                    <label class="form-check-label" for="check7">
+                                    Artifical Insemination
+                                    </label>
+                                </div>      
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check8">
+                                        <label class="form-check-label" for="check8">
+                                        Consultancy
+                                        </label>
+                                    </div>
+                                    </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="othercheck">
+                                    <label class="form-check-label" for="othercheck">
+                                    Other
+                                    </label>
+                                    <input class="form-control" type="text" value="" id="other-input" style="display: none;"> 
+                                </div>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                            <div class="row animal-treatment pt-2" id="animalTreatment-div" style="display: none;">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Animal Species</label>
+                                        <input class="form-control" type="text" value="" id="">  
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Animal Breeds</label>
+                                        <input class="form-control" type="text" value="" id="">  
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Animal Age</label>
+                                        <input class="form-control" type="text" value="" id="">  
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Sign And Semtoms</label>
+                                        <input class="form-control" type="text" value="" id="">  
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Diagnosis</label>
+                                        <input class="form-control" type="text" value="" id="">  
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">History Of Vaccination</h2>
+                            <!-- <h3 class="fs-subtitle">We will never sell it</h3> -->
+                            <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <label for="fnivel">Select Vaccine</label>
+                                    <select id="fnivel" class="form-control">
+                                        <option selected>Select Vaccine</option>
+                                        <option value="1">one</option>
+                                        <option value="2">two</option>
+                                        <option value="3">three</option>
+                                        </select>
+                                </div>
+                                <!-- <div class="col-md-6 col-12" id="fnivel2" style="display: none;">
+                                    <label class="form-label" for="">Vaccine Name</label>
+                                    <input class="form-control" type="text" value="" id="">    
+                                </div> -->
+                                <div class="col-md-6 col-12" id="fnivel3"  style=" margin-top: 7px;">
+                                    <label class="form-check-label" for=""> Vaccine Date </label>
+                                    <input class="form-control" type="date" value="" id="">
+                                </div>
+                                </div>
+                            <div class="row pt-2">
+                                <div class="col-12 text-right">
+                                <button class="btn-green" type="submit">Add</button>
+                                </div>
+                            </div>
+                            <div class="row pt-5">
+                                <table class="table  table-striped table-bordered">
+                                <tr style="text-align: left;" class="bg-info text-white">
+                                    <th>Sr.No.</th>
+                                    <th>Vaccine Name</th>
+                                    <th>Date of Vaccination</th>
+                                    <!-- <th>Actions</th> -->
+
+                                </tr>
+                                <tr style="text-align: left;">
+                                    <td>1</td>
+                                    <td>vaccine</td>
+                                    <td>1234</td>
+                                    <!-- <td>
+                                        <a> <i class="far fa-edit text-success" type="button" data-toggle="modal" data-target="#modal1" tooltip="Edit"> </i>   
+                                </a>
+                                <a><i class="fas fa-trash mx-2 text-danger" data-toggle="modal" data-target="#modal-delete " tooltip="Delete"></i>
+                                    </td> -->
+                                    </tr>
+                            </table>
+                            </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                        </fieldset>
+                        </form>
+                    </div>  
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>      
+  </div>
+</div>
+
+    
+    <!-- Javascript -->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+    <script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="assets/bundles/chartist.bundle.js"></script>
+    <script src="assets/bundles/knob.bundle.js"></script>
+    <!-- Jquery Knob-->
+    <script src="assets/bundles/flotscripts.bundle.js"></script>
+    <!-- flot charts Plugin Js -->
+    <script src="assets/vendor/flot-charts/jquery.flot.selection.js"></script>
+
+    <script src="assets/bundles/mainscripts.bundle.js"></script>
+    <script src="assets/js/index.js"></script>         
+
+    <script src="https://www.jqueryscript.net/demo/Creating-A-Modern-Multi-Step-Form-with-jQuery-CSS3/js/jquery.easing.min.js"></script>
+  
+        <script>
+          $(function() {
+
+            
+var current_fs, next_fs, previous_fs; 
+var left, opacity, scale; 
+var animating; 
+$(".next").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  next_fs = $(this).parent().next();
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+  next_fs.show(); 
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      scale = 1 - (1 - now) * 0.2;
+      left = (now * 50)+"%";
+      opacity = 1 - now;
+      current_fs.css({'transform': 'scale('+scale+')'});
+      next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 1000, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    easing: 'easeInOutBack'
+  });
+});
+
+$(".previous").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  previous_fs = $(this).parent().prev();
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+  previous_fs.show(); 
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      scale = 0.8 + (1 - now) * 0.2;
+      left = ((1-now) * 50)+"%";
+      opacity = 1 - now;
+      current_fs.css({'left': left});
+      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+    }, 
+    duration: 1000, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    easing: 'easeInOutBack'
+  });
+});
+
+$(".submit").click(function(){
+  return false;
+})
+$('#isChecked').click(function(){
+    $("#other-divChk").toggle(this.checked);
+    });
+
+ $('#check4').click(function(){
+ $("#input-field-check4").toggle(this.checked);
+      });
+
+$('#cattle-check').click(function(){
+ $("#cattle-divchk").toggle(this.checked);
+      });
+
+$('#buffalo-check').click(function(){
+ $("#buffalo-divchk").toggle(this.checked);
+      });
+
+$('#sheep-check').click(function(){
+ $("#sheep-divchk").toggle(this.checked);
+      });
+
+$('#goat-check').click(function(){
+ $("#goat-divchk").toggle(this.checked);
+      });
+
+$('#poultry-check').click(function(){
+ $("#poultry-divchk").toggle(this.checked);
+      });
+
+$('#show').click(function(){
+ $("#input-field").toggle(this.checked);
+      });
+      $('#animaltreatment-check').click(function(){
+ $("#animalTreatment-div").toggle(this.checked);
+      });
+
+      $('#othercheck').click(function(){
+ $("#other-input").toggle(this.checked);
+      });
+
+});
+
+// $("#fnivel").change(function () {
+//   var selected_option = $('#fnivel').val();
+
+//   if (selected_option === '2') {
+//     $('#fnivel3').attr('pk','1').show();
+//   }
+//   if (selected_option != '2') {
+//     $("#fnivel3").removeAttr('pk').hide();
+//   };
+// });
+
+        </script>
+
+
+
+</body>
+</html>

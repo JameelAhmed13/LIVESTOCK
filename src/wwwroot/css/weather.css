@@ -1,0 +1,109 @@
+﻿.ww-informers-box-854754 {
+    -webkit-animation-name: ww-informers54;
+    animation-name: ww-informers54;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-family: Arial;
+    line-height: 18px;
+    text-align: center
+}
+
+@-webkit-keyframes ww-informers54 {
+    0%,80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes ww-informers54 {
+    0%,80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.imgcard {
+    height: 220px;
+    width: 100%;
+}
+
+#rcorners3 {
+    border-radius: 15px 50px;
+    background: #C3E6CB;
+    padding: 10px;
+    color:black;
+    font-weight:400;
+   font-size:18px;
+} 
+.card {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    font-weight:500;
+    line-height:1.5;
+}
+
+    .card-title i {
+        font-size: 15px;
+        transition: 1s;
+        cursor: pointer;
+        color: #ffa710
+    }
+
+        .card-title i:hover {
+            transform: scale(1.25) rotate(100deg);
+            color: #18d4ca;
+        }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+
+.card-text {
+    height: 100px;
+    line-height: 1.5;
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+
+.card::before {
+    transform-origin: left top;
+}
+
+.card::after {
+    transform-origin: right bottom;
+}
+
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+
+

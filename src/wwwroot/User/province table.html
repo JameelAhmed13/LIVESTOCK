@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Balochistan">
+    <meta name="author" content="BPPRA">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate-css/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/color_skins.css">
+    <link rel="stylesheet" href="assets/css/style.Css">
+
+    <script src="https://kit.fontawesome.com/b609505ebe.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="theme-blue">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper" style="opacity:.9">
+        <div class="loader">
+            <div class="m-t-30"><img src="assets/images/AHIS-logo.png" width="100" height="100" alt="AHIS"></div>
+            <p>&nbsp; Please wait...</p>
+        </div>
+    </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+    <div class="overlay" style="display: none;"></div>
+    <div id="wrapper">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="design.html">
+                        
+                        <span class="name">
+                            <!-- <img src="assets/images/AHIS-logo.png" width="40" height="40" alt=""> -->
+                            &nbsp; &nbsp; &nbsp; Livestock Dairy <br> Development Department</span>
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <ul class="list-unstyled clearfix mb-0">
+                        <li>
+                            <div class="navbar-btn btn-toggle-show">
+                                <button type="button" class="btn-toggle-offcanvas"><i
+                                        class="lnr lnr-menu fa fa-bars"></i></button>
+                            </div>
+                            <a href="javascript:void(0);" class="btn-toggle-fullwidth btn-toggle-hide"><i
+                                    class="fa fa-bars"></i></a>
+                        </li>
+                        <li>
+                            <form id="navbar-search" class="navbar-form search-form">
+                                <input value="" class="form-control" placeholder="Search here..." type="text">
+                                <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                            </form>
+                        </li>
+                        <li>
+                            <div id="navbar-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                            <i class="icon-bell"></i>
+                                            <span class="notification-dot"></span>
+                                        </a>
+                                        <ul class="dropdown-menu animated bounceIn notifications">
+                                            <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <i class="icon-info text-warning"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                            <span class="timestamp">10:00 AM Today</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <i class="icon-like text-success"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text">Your New Campaign <strong>Holiday
+                                                                    Sale</strong> is approved.</p>
+                                                            <span class="timestamp">11:30 AM Today</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <i class="icon-pie-chart text-info"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text">Website visits from Twitter is 27% higher than last week.</p>
+                                                            <span class="timestamp">04:00 PM Today</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <i class="icon-info text-danger"></i>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text">Error on website analytics configurations
+                                                            </p>
+                                                            <span class="timestamp">Yesterday</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="footer"><a href="javascript:void(0);" class="more">See all
+                                                    notifications</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-flag"></i><span
+                                                class="notification-dot"></span></a>
+                                        <ul class="dropdown-menu animated bounceIn task">
+                                            <li class="header"><strong>Project</strong></li>
+                                            <li class="body">
+                                                <ul class="menu tasks list-unstyled">
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="text-muted">Clockwork Orange <span
+                                                                    class="float-right">29%</span></span>
+                                                            <div class="progress">
+                                                                <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="text-muted">Blazing Saddles <span
+                                                                    class="float-right">78%</span></span>
+                                                            <div class="progress">
+                                                                <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="text-muted">Project Archimedes <span
+                                                                    class="float-right">45%</span></span>
+                                                            <div class="progress">
+                                                                <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="text-muted">Eisenhower X <span
+                                                                    class="float-right">68%</span></span>
+                                                            <div class="progress">
+                                                                <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="text-muted">Oreo Admin Templates <span
+                                                                    class="float-right">21%</span></span>
+                                                            <div class="progress">
+                                                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="footer"><a href="javascript:void(0);">View All</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                            <img class="rounded-circle" src="assets/images/AHIS-logo.png" width="30" alt="">
+                                        </a>
+                                        <div class="dropdown-menu animated flipInY user-profile">
+                                            <div class="d-flex p-3 align-items-center">
+                                                <div class="drop-left m-r-10">
+                                                    <img src="assets/images/AHIS-logo.png" class="rounded" width="50" alt="">
+                                                </div>
+                                                <div class="drop-right">
+                                                    <h4>Samuel Morriss</h4>
+                                                    <p class="user-name">samuelmorris@info.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-10 p-3 drop-list">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="page-profile.html"><i class="icon-user"></i>My
+                                                            Profile</a></li>
+                                                    <li><a href="app-inbox.html"><i
+                                                                class="icon-envelope-open"></i>Messages</a></li>
+                                                    <li><a href="javascript:void(0);"><i
+                                                                class="icon-settings"></i>Settings</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="page-login.html"><i class="icon-power"></i>Logout</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="leftsidebar" class="sidebar">
+
+            <div class="sidebar-scroll">
+                <nav id="leftsidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu">
+                        <li class="heading">Main</li>
+                       <li class="active"><a href="design.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                        <li class="heading">Pages</li>
+                        <li class="">
+                            <a href="#" class="has-arrow"><i class="icon-user"></i><span>Registeration</span></a>
+                            <ul>
+                                <li><a href="cvh.html" ><span>Civil Veterinary Hospital</span></a></li>
+                                <li><a href="field-servay.html"><span>Field Servay</span></a></li>
+                                <li><a href="cvd.html"><span>Civil  Veterinary Dispensary</span></a></li>
+                                <li><a href="lab.html"><span>Laboratory</span></a></li>
+                            </ul>
+                        <li>
+                        <li class="">
+                          <a href="" class="has-arrow"><i class="icon-globe"></i><span>Master Data</span></a>
+                          <ul>
+                            <!-- <li><a href="Datafield.html" ><span>Datafield</span></a></li> -->
+                            <li><a href="country table.html"><span>Country</span></a></li>
+                            <li><a href="province table.html"><span>Province</span></a></li>
+                            <li><a href="division table.html"><span>Division</span></a></li>
+                            <li><a href="district table.html"><span>District</span></a></li>
+                            <li><a href="Tehsil table.html"><span>Tehsil</span></a></li>
+                            <li><a href="UC table.html"><span>Union Concil</span></a></li>
+                            <li><a href="Area table.html"><span>Area</span></a></li>
+          
+                          </ul>
+                      </li>
+                       
+                    </ul>
+                </nav>
+            </div>
+          </div>
+
+          <div id="main-content">
+            <div class="container-fluid">
+                <div class="row clearfix mt-3">
+                    <div class="col-12">
+                       <div class="card p-4">
+                         
+                        <form action="">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <legend>Province </legend>
+                                    </div>
+                                         <div class="col-8 text-right">
+                                        <button type="button" class="btn-green mb-2" data-toggle="modal" data-target="#modal1"><i class="fas fa-plus"></i> Add Province</button>
+          
+                                        <div class="modal fade" data-backdrop="static" id="modal1">
+                                            <div class="modal-dialog modal-xl">
+                                                <div class="modal-content">
+                                                    <div class="modal-header bg-success">
+                                                        <h5 class="modal-title text-white">Province Configuration</h5>
+                                                        <button class="close" data-dismiss="modal">
+                                                            <span style="color: white;">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body" style="text-align: left;">
+                                                   <div class="container-fluid">
+                                                        <form action="">
+                                                            <fieldset>
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 col-12">
+                                                                        <div class="form-group">
+                                                                        <label class="form-label">Country</label>
+                                                                       <select class="custom-select">
+                                                                            <option> 1</option>
+                                                                            <option> 2</option>
+                                                                            <option> 3</option>
+                                                                            <option> 4</option>
+                                                                            <option> 5</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-12">
+                                                                    <div class="form-group">
+                                                                            <label class="form-label">Province Name</label>
+                                                                            <input type="text" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+          
+                                                   </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col text-right">
+                                                                    <button id="savebtn" type="Submit" class="btn btn-success m-1"><i class="fas fa-save"></i> Save</button>
+                                                                    <button id="savebtn" type="Reset" class="btn btn-danger m-1"><i class="fas fa-undo-alt"></i> Reset</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+          
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                            <table class="table table-bordered table-striped ">
+                                        <tr style="text-align: left; background: #2e5395;" class=" text-white">
+                                            <th>Actions</th>
+                                            <th>Sr #</th>
+                                            <th>Province Name</th>
+                                            <th>Country</th>
+                                            
+          
+                                        </tr>
+                                        <tr style="text-align: left;">
+                                            <td>
+                                                <a class="tooltip"> <i class="far fa-edit text-success" type="button" data-toggle="modal" data-target="#modal1"> </i> 
+                                                  <span class="tooltiptext">
+                                                      Edit
+                                                  </span>  
+                                        </a> &nbsp; &nbsp;
+                                            <a class="tooltip"><i class="fas fa-trash mx-2 text-danger" data-toggle="modal" data-target="#delete-modal" ></i>
+                                            <div class="tooltiptext">
+                                                Delete
+                                            </div> 
+                                            </a>
+
+                                          <div class="modal fade" id="delete-modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modal-header" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header bg-success text-white">
+                                                  <h5 class="modal-title" id="modal-header">Delete Confirmation</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true" style="color: #fff;">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <h6>Are You Sure You Want Delete This?</h6>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="submit" class="btn btn-success">Yes</button>
+                                                  
+                                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                              </td>
+                                            <td>1</td>
+                                            <td>country</td>
+                                            <td>1234</td>
+                                            
+                                        </tr>
+                                    </table>
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" data-target="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" data-target="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" data-target="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" data-target="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" data-target="#">Next</a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>    
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/bundles/libscripts.bundle.js"></script>
+    <script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="assets/bundles/chartist.bundle.js"></script>
+    <script src="assets/bundles/knob.bundle.js"></script>
+    <!-- Jquery Knob-->
+    <script src="assets/bundles/flotscripts.bundle.js"></script>
+    <!-- flot charts Plugin Js -->
+    <script src="assets/vendor/flot-charts/jquery.flot.selection.js"></script>
+
+    <script src="assets/bundles/mainscripts.bundle.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+
+</html>

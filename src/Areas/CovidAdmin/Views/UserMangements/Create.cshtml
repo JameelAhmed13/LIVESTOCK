@@ -1,0 +1,89 @@
+﻿
+@model LIVESTOCK.Areas.CovidAdmin.Models.RegisterLabUser
+@{
+    ViewData["Title"] = "Create";
+}
+@{
+    var Roles = new List<SelectListItem>
+{
+new SelectListItem { Value = "Administrator", Text = "Administrator" },
+new SelectListItem { Value = "Procurement", Text = "Procurement" },
+new SelectListItem { Value = "Education", Text = "Education" },
+new SelectListItem { Value = "Development", Text = "Development"  },
+new SelectListItem { Value = "M&E", Text = "M&E"  },
+new SelectListItem { Value = "Finance", Text = "Finance"  },
+new SelectListItem { Value = "HR", Text = "HR"  },
+new SelectListItem { Value = "CovidLab", Text = "CovidLab"  },
+new SelectListItem { Value = "CovidAdmin", Text = "CovidAdmin"  },
+new SelectListItem { Value = "Admin", Text = "Admin"  },
+new SelectListItem { Value = "Guest", Text = "Guest"  },
+};
+}
+<div class="login-box-body" style="margin:50px">
+    <p class="login-box-msg">Register a new user</p>
+    <form method="post" enctype="multipart/form-data">
+        <input asp-for="RegionalAccess" type="hidden" value="1">
+        <input asp-for="LabAccess" type="hidden" value="@ViewBag.LabID">        
+        <input name="LabID" type="hidden" value="@ViewBag.LabID">        
+        <input asp-for="SectionRole" type="hidden" value="CovidLab">
+        <div class="form-group has-feedback">
+            <input asp-for="FullName" type="text" class="form-control" placeholder="Full name">
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            <span asp-validation-for="FullName" class="help-block"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input asp-for="Email" type="email" class="form-control" placeholder="Email">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <span asp-validation-for="Email" class="help-block"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <span asp-validation-for="Password" class="help-block"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Retype password">
+            <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+            <span asp-validation-for="ConfirmPassword" class="help-block"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+        @*<div class="form-group has-feedback">
+                <input asp-for="Input.RegionalAccess" class="form-control" placeholder="Regional Access Eg. 1,2,3">
+                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                <span asp-validation-for="Input.RegionalAccess" class="help-block"></span>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>*@
+        @*<div class="form-group has-feedback">
+                <select asp-for="LabAccess" class="form-control" asp-items="ViewBag.LabID"></select>
+                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>*@
+        @*<div class="form-group has-feedback">
+                <select asp-for="Input.SectionRole" asp-items="Roles"></select>
+                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                <span asp-validation-for="Input.SectionRole" class="help-block"></span>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>*@
+        <div class="form-group has-feedback">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+    </form>
+
+    @*<div class="social-auth-links text-center">
+            <p>- OR -</p>
+            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
+                <i class="fa fa-facebook"></i> Sign up using Facebook
+            </a>
+            <a href="#" class="btn btn-block btn-social btn-google btn-flat">
+                <i class="fa fa-google-plus"></i> Sign up using Google+
+            </a>
+        </div>*@
+    <a asp-action="ViewUsers" asp-route-id="@ViewBag.LabID">Back to List</a>
+</div>

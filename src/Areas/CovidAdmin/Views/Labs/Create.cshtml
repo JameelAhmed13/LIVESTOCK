@@ -1,0 +1,104 @@
+﻿@model LIVESTOCK.Areas.CovidLab.Models.Lab
+
+@{
+    ViewData["Title"] = "Create";
+}
+@section Styles {
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/libs/datatables/css/dataTables.bootstrap.min.css">
+}
+<div style="margin:20px">
+    <form asp-action="Create">
+        <h4 class="text-center" style="font-weight:bold;margin-bottom:10px">Add Lab Form</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="DistrictID" class="control-label"></label>
+                    <select asp-for="DistrictID" class="form-control" asp-items="ViewBag.DistrictID"></select>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="ContactNo" class="control-label"></label>
+                    <input asp-for="ContactNo" class="form-control" />
+                    <span asp-validation-for="ContactNo" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label asp-for="MobileNo" class="control-label"></label>
+                    <input asp-for="MobileNo" class="form-control" />
+                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>            
+                                   
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group" style="margin-top:25px">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="col-md-2"  style="margin-top:35px">
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row" style="margin-left:10px">
+    
+    <div class="col-md-2">
+        <h4 class="box-title">
+            <text style="font-weight:bold">List of Labs </text>
+        </h4>
+    </div>
+    <div class="col-md-1" id="divLoading">
+        <img src="~/img/sspinner.gif" width="40" height="40" />
+    </div>
+
+</div>
+
+<div id="dynamicContentContainer" style="margin:15px"></div>
+<div id="dynamicContentContainerUser" style="margin:15px"></div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            $.get('@Url.Action("Index2", "Labs")', function (content) {
+                $("#dynamicContentContainer").html(content);
+                $("#divLoading").hide();
+            });
+        });
+
+        function getRetirementData() {         
+            $.get('@Url.Action("ViewUsers", "UserMangements")', function (content) {
+                $("#dynamicContentContainerUser").html(content);
+                $("#divLoading").hide();
+            });
+        }
+    </script>
+
+}
+
+

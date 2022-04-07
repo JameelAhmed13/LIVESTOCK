@@ -1,0 +1,47 @@
+﻿@model LIVESTOCK.Areas.CovidLab.Models.Lab
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div style="margin:20px">
+    <h4 style="font-weight:bold">Lab Details</h4>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContactNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.District.DistrictName)
+        </dd>
+    </dl>
+
+    <div>        
+        <a asp-action="Create">Back to List</a>
+    </div>
+</div>
+

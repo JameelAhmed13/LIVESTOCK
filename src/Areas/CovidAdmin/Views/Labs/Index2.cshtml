@@ -1,0 +1,72 @@
+﻿@model IEnumerable<LIVESTOCK.Areas.CovidLab.Models.Lab>
+
+<script src="~/libs/datatables/js/jquery.dataTables.min.js"></script>
+<script src="~/libs/datatables/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.dataTables-example').DataTable({
+        });
+    });
+</script>
+<table class="table table-striped table-bordered  dataTables-example">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.District)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MobileNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.District.DistrictName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LabID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.LabID">Details</a> |
+                    <a asp-controller="UserMangements" asp-action="ViewUsers" asp-route-id="@item.LabID">Users</a>
+                    @*<a onclick="getRetirementData()">Users</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*<div id="dynamicContentContainerUser" style="margin:15px"></div>
+<script>
+      
+        function getRetirementData() {
+            $.get('@Url.Action("Index", "UserMangements",new {id=1 })', function (content) {
+                $("#dynamicContentContainerUser").html(content);
+                $("#divLoading").hide();
+            });
+        }
+</script>*@

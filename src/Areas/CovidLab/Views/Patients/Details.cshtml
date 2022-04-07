@@ -1,0 +1,76 @@
+﻿@model LIVESTOCK.Areas.CovidLab.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div style="margin:20px">
+    <h4 style="font-weight:bold">Patient Detail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherHusbandName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FatherHusbandName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profession)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profession)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DOS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DOS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.District.DistrictName)
+        </dd>
+    </dl>
+</div>
+<div style="margin:20px">    
+    <a asp-action="Create" asp-controller="Patients">Back to List</a>
+</div>

@@ -1,0 +1,576 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_003{font-family:"Impact",serif;font-size:29.7px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:"Impact",serif;font-size:29.7px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:Arial,serif;font-size:8.8px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_009{font-family:Arial,serif;font-size:8.8px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_005{font-family:Arial,serif;font-size:6.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_005{font-family:Arial,serif;font-size:6.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_006{font-family:Arial,serif;font-size:6.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_006{font-family:Arial,serif;font-size:6.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_007{font-family:Arial,serif;font-size:4.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_007{font-family:Arial,serif;font-size:4.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_011{font-family:Arial,serif;font-size:4.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_011{font-family:Arial,serif;font-size:4.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_008{font-family:Arial,serif;font-size:6.0px;color:rgb(62,64,149);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_008{font-family:Arial,serif;font-size:6.0px;color:rgb(62,64,149);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_012{font-family:Arial,serif;font-size:4.8px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_012{font-family:Arial,serif;font-size:4.8px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_014{font-family:"Impact",serif;font-size:34.3px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_014{font-family:"Impact",serif;font-size:34.3px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_022{font-family:Arial,serif;font-size:7.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_022{font-family:Arial,serif;font-size:7.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_017{font-family:Arial,serif;font-size:5.5px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_017{font-family:Arial,serif;font-size:5.5px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_023{font-family:Arial,serif;font-size:5.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_023{font-family:Arial,serif;font-size:5.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_016{font-family:Arial,serif;font-size:11.3px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_016{font-family:Arial,serif;font-size:11.3px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_019{font-family:Arial,serif;font-size:5.5px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_019{font-family:Arial,serif;font-size:5.5px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_021{font-family:Arial,serif;font-size:7.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_021{font-family:Arial,serif;font-size:7.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_024{font-family:Arial,serif;font-size:9.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_024{font-family:Arial,serif;font-size:9.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_027{font-family:Arial,serif;font-size:3.5px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_027{font-family:Arial,serif;font-size:3.5px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_026{font-family:Arial,serif;font-size:3.5px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_026{font-family:Arial,serif;font-size:3.5px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_028{font-family:Arial,serif;font-size:8.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_028{font-family:Arial,serif;font-size:8.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_031{font-family:"Impact",serif;font-size:32.6px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_031{font-family:"Impact",serif;font-size:32.6px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_038{font-family:Arial,serif;font-size:5.2px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_038{font-family:Arial,serif;font-size:5.2px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_037{font-family:Arial,serif;font-size:4.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_037{font-family:Arial,serif;font-size:4.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_035{font-family:Arial,serif;font-size:8.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_035{font-family:Arial,serif;font-size:8.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_018{font-family:Arial,serif;font-size:5.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_018{font-family:Arial,serif;font-size:5.1px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_036{font-family:Arial,serif;font-size:6.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_036{font-family:Arial,serif;font-size:6.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_040{font-family:Arial,serif;font-size:9.5px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_040{font-family:Arial,serif;font-size:9.5px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_042{font-family:Arial,serif;font-size:11.0px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_042{font-family:Arial,serif;font-size:11.0px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_044{font-family:"Impact",serif;font-size:33.0px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_044{font-family:"Impact",serif;font-size:33.0px;color:rgb(62,64,149);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_050{font-family:Arial,serif;font-size:4.7px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_050{font-family:Arial,serif;font-size:4.7px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_049{font-family:Arial,serif;font-size:4.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_049{font-family:Arial,serif;font-size:4.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_053{font-family:Arial,serif;font-size:4.1px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_053{font-family:Arial,serif;font-size:4.1px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_051{font-family:Arial,serif;font-size:3.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_051{font-family:Arial,serif;font-size:3.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_039{font-family:Arial,serif;font-size:4.8px;color:rgb(175,189,119);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_039{font-family:Arial,serif;font-size:4.8px;color:rgb(175,189,119);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_061{font-family:Arial,serif;font-size:6.9px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_061{font-family:Arial,serif;font-size:6.9px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_069{font-family:Arial,serif;font-size:3.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_069{font-family:Arial,serif;font-size:3.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_067{font-family:Arial,serif;font-size:2.8px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_067{font-family:Arial,serif;font-size:2.8px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_063{font-family:Arial,serif;font-size:5.4px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_063{font-family:Arial,serif;font-size:5.4px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_062{font-family:Arial,serif;font-size:5.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_062{font-family:Arial,serif;font-size:5.0px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_060{font-family:Arial,serif;font-size:15.6px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_060{font-family:Arial,serif;font-size:15.6px;color:rgb(55,52,53);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_071{font-family:Arial,serif;font-size:3.8px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_071{font-family:Arial,serif;font-size:3.8px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_070{font-family:Arial,serif;font-size:3.6px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_070{font-family:Arial,serif;font-size:3.6px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_065{font-family:Arial,serif;font-size:5.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_065{font-family:Arial,serif;font-size:5.0px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_064{font-family:Arial,serif;font-size:4.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_064{font-family:Arial,serif;font-size:4.7px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_085{font-family:Arial,serif;font-size:3.4px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_085{font-family:Arial,serif;font-size:3.4px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_084{font-family:Arial,serif;font-size:3.2px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_084{font-family:Arial,serif;font-size:3.2px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_078{font-family:Arial,serif;font-size:2.7px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_078{font-family:Arial,serif;font-size:2.7px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_077{font-family:Arial,serif;font-size:2.6px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_077{font-family:Arial,serif;font-size:2.6px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_083{font-family:Arial,serif;font-size:3.1px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_083{font-family:Arial,serif;font-size:3.1px;color:rgb(237,51,55);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_082{font-family:Arial,serif;font-size:2.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_082{font-family:Arial,serif;font-size:2.9px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_081{font-family:Arial,serif;font-size:11.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_081{font-family:Arial,serif;font-size:11.4px;color:rgb(55,52,53);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_046{font-family:Arial,serif;font-size:4.4px;color:rgb(246,235,37);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_046{font-family:Arial,serif;font-size:4.4px;color:rgb(246,235,37);font-weight:bold;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-216px;top:0px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background1.jpg" width=432 height=432></div>
+<div style="position:absolute;left:114.50px;top:10.15px" class="cls_003"><span class="cls_003">QUETTA DIVISION</span></div>
+<div style="position:absolute;left:364.34px;top:102.03px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:364.34px;top:111.85px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:364.34px;top:121.68px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:364.34px;top:131.50px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:180.13px;top:144.13px" class="cls_005"><span class="cls_005">A- </span><span class="cls_006">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:364.34px;top:141.32px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:180.13px;top:150.83px" class="cls_005"><span class="cls_005">B- </span><span class="cls_006">Kundi</span></div>
+<div style="position:absolute;left:364.34px;top:151.15px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:180.13px;top:157.53px" class="cls_005"><span class="cls_005">C- </span><span class="cls_006">Khurasani and Barki</span></div>
+<div style="position:absolute;left:180.13px;top:164.24px" class="cls_005"><span class="cls_005">D- </span><span class="cls_006">Khurasani , Barbari and Kamori</span></div>
+<div style="position:absolute;left:180.13px;top:170.94px" class="cls_005"><span class="cls_005">E- </span><span class="cls_006">Raidi and Kohi</span></div>
+<div style="position:absolute;left:76.03px;top:177.13px" class="cls_005"><span class="cls_005">A- </span><span class="cls_006">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:180.13px;top:177.64px" class="cls_005"><span class="cls_005">F-</span></div>
+<div style="position:absolute;left:189.07px;top:177.72px" class="cls_006"><span class="cls_006">Horse Cross Breed</span></div>
+<div style="position:absolute;left:76.03px;top:183.83px" class="cls_005"><span class="cls_005">B- </span><span class="cls_006">Kundi</span></div>
+<div style="position:absolute;left:76.03px;top:190.53px" class="cls_005"><span class="cls_005">C- </span><span class="cls_006">Rakhsan and Balochi</span></div>
+<div style="position:absolute;left:76.03px;top:197.24px" class="cls_005"><span class="cls_005">D- </span><span class="cls_006">Khurasani and Barbari</span></div>
+<div style="position:absolute;left:76.03px;top:203.94px" class="cls_005"><span class="cls_005">E- </span><span class="cls_006">Raidi and Kohi</span></div>
+<div style="position:absolute;left:76.03px;top:210.64px" class="cls_005"><span class="cls_005">F-</span><span class="cls_006">  Horse Cross Breed</span></div>
+<div style="position:absolute;left:253.08px;top:239.26px" class="cls_007"><span class="cls_007">Friesian Cross</span></div>
+<div style="position:absolute;left:288.64px;top:239.26px" class="cls_007"><span class="cls_007">Kundi Breed</span></div>
+<div style="position:absolute;left:324.55px;top:239.26px" class="cls_007"><span class="cls_007">Neeli Ravi</span></div>
+<div style="position:absolute;left:352.25px;top:240.34px" class="cls_007"><span class="cls_007">Rakhsan Breed</span></div>
+<div style="position:absolute;left:388.44px;top:240.12px" class="cls_011"><span class="cls_011">Balochi Breed</span></div>
+<div style="position:absolute;left:262.55px;top:244.07px" class="cls_007"><span class="cls_007">Breed</span></div>
+<div style="position:absolute;left:328.75px;top:244.07px" class="cls_007"><span class="cls_007">Breed</span></div>
+<div style="position:absolute;left:73.63px;top:276.13px" class="cls_005"><span class="cls_005">A- </span><span class="cls_006">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:73.63px;top:282.83px" class="cls_005"><span class="cls_005">B- </span><span class="cls_006">Kundi and neeli Ravi</span></div>
+<div style="position:absolute;left:253.35px;top:283.95px" class="cls_007"><span class="cls_007">Bevrigh Breed    Khurasani</span></div>
+<div style="position:absolute;left:322.86px;top:284.85px" class="cls_007"><span class="cls_007">Raidi Breed</span></div>
+<div style="position:absolute;left:356.44px;top:284.85px" class="cls_007"><span class="cls_007">Kohi Breed</span></div>
+<div style="position:absolute;left:387.09px;top:284.85px" class="cls_007"><span class="cls_007">Kamori, Breed</span></div>
+<div style="position:absolute;left:73.63px;top:289.53px" class="cls_005"><span class="cls_005">C- </span><span class="cls_006">Bevrigh, Khurasni</span></div>
+<div style="position:absolute;left:295.35px;top:288.76px" class="cls_007"><span class="cls_007">Breed</span></div>
+<div style="position:absolute;left:73.63px;top:296.24px" class="cls_005"><span class="cls_005">D- </span><span class="cls_006">Kamori, Beetal and Balochi</span></div>
+<div style="position:absolute;left:73.63px;top:302.94px" class="cls_005"><span class="cls_005">E- </span><span class="cls_006">Raid and Brohi</span></div>
+<div style="position:absolute;left:73.63px;top:309.64px" class="cls_005"><span class="cls_005">F-</span><span class="cls_008"> </span><span class="cls_006">Horse</span><span class="cls_008"> </span><span class="cls_006">Cross</span><span class="cls_008"> </span><span class="cls_006">Breed</span></div>
+<div style="position:absolute;left:254.91px;top:327.73px" class="cls_007"><span class="cls_007">Beetal Breed</span></div>
+<div style="position:absolute;left:289.36px;top:327.73px" class="cls_007"><span class="cls_007">Barki Breed</span></div>
+<div style="position:absolute;left:322.50px;top:327.73px" class="cls_007"><span class="cls_007">Brohi Breed</span></div>
+<div style="position:absolute;left:357.52px;top:327.73px" class="cls_007"><span class="cls_007">RIR Breed</span><span class="cls_012">   Fayoumi Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:442px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background2.jpg" width=432 height=432></div>
+<div style="position:absolute;left:114.18px;top:7.50px" class="cls_014"><span class="cls_014">ZHOB DIVISION</span></div>
+<div style="position:absolute;left:119.34px;top:60.03px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:119.34px;top:69.85px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:119.34px;top:79.68px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:119.34px;top:89.50px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:359.70px;top:97.04px" class="cls_022"><span class="cls_022">Sherani</span></div>
+<div style="position:absolute;left:119.34px;top:99.32px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:119.34px;top:109.15px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:354.34px;top:111.84px" class="cls_017"><span class="cls_017">A-</span></div>
+<div style="position:absolute;left:363.03px;top:112.26px" class="cls_023"><span class="cls_023">Lohani Friesian Cross Breed</span></div>
+<div style="position:absolute;left:7.28px;top:117.46px" class="cls_012"><span class="cls_012">Friesian Cross</span></div>
+<div style="position:absolute;left:46.32px;top:117.46px" class="cls_012"><span class="cls_012">Kundi Breed</span></div>
+<div style="position:absolute;left:85.61px;top:117.46px" class="cls_012"><span class="cls_012">Neeli Ravi</span></div>
+<div style="position:absolute;left:210.18px;top:112.21px" class="cls_016"><span class="cls_016">Zhob</span></div>
+<div style="position:absolute;left:354.34px;top:117.87px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:363.03px;top:118.29px" class="cls_023"><span class="cls_023">Kundi</span></div>
+<div style="position:absolute;left:17.71px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:354.34px;top:123.91px" class="cls_017"><span class="cls_017">C- </span><span class="cls_023">Bevrigh, Harnai and Khrasani</span></div>
+<div style="position:absolute;left:257.84px;top:128.95px" class="cls_017"><span class="cls_017">A-</span></div>
+<div style="position:absolute;left:266.71px;top:128.95px" class="cls_019"><span class="cls_019">Lohani Friesian Cross Breed</span></div>
+<div style="position:absolute;left:354.34px;top:129.94px" class="cls_017"><span class="cls_017">D-</span></div>
+<div style="position:absolute;left:363.03px;top:130.36px" class="cls_023"><span class="cls_023">Kamori and</span></div>
+<div style="position:absolute;left:390.35px;top:130.36px" class="cls_023"><span class="cls_023">Khurasani</span></div>
+<div style="position:absolute;left:257.84px;top:134.98px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:266.71px;top:134.98px" class="cls_019"><span class="cls_019">Neeli Lravi and Kundi</span></div>
+<div style="position:absolute;left:354.34px;top:135.97px" class="cls_017"><span class="cls_017">E-</span></div>
+<div style="position:absolute;left:363.03px;top:136.39px" class="cls_023"><span class="cls_023">Kohi and Raidi</span></div>
+<div style="position:absolute;left:257.84px;top:141.02px" class="cls_017"><span class="cls_017">C-</span></div>
+<div style="position:absolute;left:266.71px;top:141.02px" class="cls_019"><span class="cls_019">Bevrigh, Harnai and Khrasani</span></div>
+<div style="position:absolute;left:354.34px;top:142.01px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:363.03px;top:142.43px" class="cls_023"><span class="cls_023">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:257.84px;top:147.05px" class="cls_017"><span class="cls_017">D-</span></div>
+<div style="position:absolute;left:266.71px;top:147.05px" class="cls_019"><span class="cls_019">Khrasani, Beetal and Barbari</span></div>
+<div style="position:absolute;left:257.84px;top:153.08px" class="cls_017"><span class="cls_017">E-</span></div>
+<div style="position:absolute;left:266.71px;top:153.08px" class="cls_019"><span class="cls_019">Kohi and Raidi</span></div>
+<div style="position:absolute;left:177.09px;top:156.74px" class="cls_021"><span class="cls_021">Killa Saifullah</span></div>
+<div style="position:absolute;left:257.84px;top:159.12px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:266.71px;top:159.12px" class="cls_019"><span class="cls_019">Arabian Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:8.64px;top:167.73px" class="cls_012"><span class="cls_012">Lohani Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:171.84px;top:177.45px" class="cls_017"><span class="cls_017">A- </span><span class="cls_019">Lohani, Friesian Cross Breed</span></div>
+<div style="position:absolute;left:171.84px;top:183.48px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:180.71px;top:183.48px" class="cls_019"><span class="cls_019">Kundi</span></div>
+<div style="position:absolute;left:373.74px;top:177.51px" class="cls_024"><span class="cls_024">Musakhel</span></div>
+<div style="position:absolute;left:171.84px;top:189.52px" class="cls_017"><span class="cls_017">C- </span><span class="cls_019">Bevrigh, Harnai and Khrasani</span></div>
+<div style="position:absolute;left:171.84px;top:195.55px" class="cls_017"><span class="cls_017">D- </span><span class="cls_019">Khrasani, and Barbari</span></div>
+<div style="position:absolute;left:171.84px;top:201.58px" class="cls_017"><span class="cls_017">E- </span><span class="cls_019">Raidi</span></div>
+<div style="position:absolute;left:355.50px;top:203.78px" class="cls_017"><span class="cls_017">A- </span><span class="cls_023">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:171.84px;top:207.62px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:180.71px;top:207.62px" class="cls_019"><span class="cls_019">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:355.50px;top:209.82px" class="cls_017"><span class="cls_017">B- </span><span class="cls_023">Neeli Ravi</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed</span></div>
+<div style="position:absolute;left:47.12px;top:214.95px" class="cls_012"><span class="cls_012">Barki Breed</span></div>
+<div style="position:absolute;left:79.79px;top:214.95px" class="cls_012"><span class="cls_012">Fayoumi Breed</span></div>
+<div style="position:absolute;left:355.50px;top:215.85px" class="cls_017"><span class="cls_017">C- </span><span class="cls_023">Bevrigh, Haranai & Khrasani</span></div>
+<div style="position:absolute;left:355.50px;top:221.88px" class="cls_017"><span class="cls_017">D- </span><span class="cls_023">Khrasani, Beetal and Barbari</span></div>
+<div style="position:absolute;left:355.50px;top:227.92px" class="cls_017"><span class="cls_017">E- </span><span class="cls_023">Kohi</span></div>
+<div style="position:absolute;left:280.07px;top:234.17px" class="cls_027"><span class="cls_027">A- </span><span class="cls_026">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:355.50px;top:233.95px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:364.19px;top:234.37px" class="cls_023"><span class="cls_023">Arabian and Balochi</span></div>
+<div style="position:absolute;left:280.07px;top:238.02px" class="cls_027"><span class="cls_027">B-</span></div>
+<div style="position:absolute;left:285.74px;top:238.02px" class="cls_026"><span class="cls_026">Kundi</span></div>
+<div style="position:absolute;left:246.36px;top:240.04px" class="cls_028"><span class="cls_028">Loralai</span><span class="cls_027">D- </span><span class="cls_026">Bevrigh and Khrasani</span></div>
+<div style="position:absolute;left:285.74px;top:245.71px" class="cls_026"><span class="cls_026">Khrasani, and Barbari</span></div>
+<div style="position:absolute;left:280.07px;top:249.56px" class="cls_027"><span class="cls_027">E- </span><span class="cls_026">Kohi and Raidi</span></div>
+<div style="position:absolute;left:280.07px;top:253.41px" class="cls_027"><span class="cls_027">F-</span></div>
+<div style="position:absolute;left:285.74px;top:253.41px" class="cls_026"><span class="cls_026">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:6.52px;top:261.94px" class="cls_012"><span class="cls_012">Rakhsan Breed</span></div>
+<div style="position:absolute;left:44.34px;top:261.94px" class="cls_012"><span class="cls_012">Haranai Breed</span></div>
+<div style="position:absolute;left:92.86px;top:262.11px" class="cls_012"><span class="cls_012">RIR</span></div>
+<div style="position:absolute;left:284.39px;top:261.73px" class="cls_027"><span class="cls_027">A- </span><span class="cls_026">Lohani, Friesian Cross Breed</span></div>
+<div style="position:absolute;left:284.39px;top:265.58px" class="cls_027"><span class="cls_027">B- </span><span class="cls_026">Kundi</span></div>
+<div style="position:absolute;left:90.22px;top:267.41px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:284.39px;top:269.43px" class="cls_027"><span class="cls_027">C- </span><span class="cls_026">Bevrigh, Harnai and Khrasani</span></div>
+<div style="position:absolute;left:284.39px;top:273.27px" class="cls_027"><span class="cls_027">D- </span><span class="cls_026">Khrasani</span></div>
+<div style="position:absolute;left:284.39px;top:277.12px" class="cls_027"><span class="cls_027">E- </span><span class="cls_026">Raidi</span></div>
+<div style="position:absolute;left:284.39px;top:280.97px" class="cls_027"><span class="cls_027">F-</span></div>
+<div style="position:absolute;left:290.05px;top:280.97px" class="cls_026"><span class="cls_026">Cross Breed</span></div>
+<div style="position:absolute;left:345.14px;top:290.73px" class="cls_027"><span class="cls_027">A- </span><span class="cls_026">Lohani, Friesian Cross Breed</span></div>
+<div style="position:absolute;left:345.14px;top:294.58px" class="cls_027"><span class="cls_027">B- </span><span class="cls_026">Neeli Ravi</span></div>
+<div style="position:absolute;left:345.14px;top:298.43px" class="cls_027"><span class="cls_027">C- </span><span class="cls_026">Balochi and Bevrigh</span></div>
+<div style="position:absolute;left:345.14px;top:302.28px" class="cls_027"><span class="cls_027">D- </span><span class="cls_026">Khrasani and Barbari</span></div>
+<div style="position:absolute;left:345.14px;top:306.12px" class="cls_027"><span class="cls_027">E- </span><span class="cls_026">Kohi</span></div>
+<div style="position:absolute;left:11.14px;top:310.98px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, Breed</span></div>
+<div style="position:absolute;left:88.11px;top:309.87px" class="cls_012"><span class="cls_012">Bevrigh</span></div>
+<div style="position:absolute;left:345.14px;top:309.97px" class="cls_027"><span class="cls_027">F-</span></div>
+<div style="position:absolute;left:350.80px;top:309.97px" class="cls_026"><span class="cls_026">Arabian Balochi Cross Breed</span></div>
+<div style="position:absolute;left:90.23px;top:315.18px" class="cls_012"><span class="cls_012">Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:884px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background3.jpg" width=432 height=432></div>
+<div style="position:absolute;left:83.78px;top:9.18px" class="cls_031"><span class="cls_031">NASIRABAD DIVISION</span></div>
+<div style="position:absolute;left:338.94px;top:75.63px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:338.94px;top:85.45px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:338.94px;top:95.28px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:338.94px;top:105.10px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:13.54px;top:117.46px" class="cls_012"><span class="cls_012">Bhagnari</span></div>
+<div style="position:absolute;left:46.32px;top:117.46px" class="cls_012"><span class="cls_012">Kundi Breed</span></div>
+<div style="position:absolute;left:84.56px;top:117.46px" class="cls_012"><span class="cls_012">Red Sindhi</span></div>
+<div style="position:absolute;left:338.94px;top:114.92px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:338.94px;top:124.75px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:189.56px;top:132.56px" class="cls_017"><span class="cls_017">A- </span><span class="cls_023">Bhagnari</span></div>
+<div style="position:absolute;left:189.56px;top:138.59px" class="cls_017"><span class="cls_017">B- </span><span class="cls_023">Kundi</span></div>
+<div style="position:absolute;left:189.56px;top:144.62px" class="cls_017"><span class="cls_017">C- </span><span class="cls_023">Balochi and Rakhshani</span></div>
+<div style="position:absolute;left:189.56px;top:150.66px" class="cls_017"><span class="cls_017">D- </span><span class="cls_023">Balochi, Lehri, Kamori and Teddi</span></div>
+<div style="position:absolute;left:189.56px;top:156.69px" class="cls_017"><span class="cls_017">E- </span><span class="cls_023">Raidi and Brahvi</span></div>
+<div style="position:absolute;left:189.56px;top:162.72px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:198.26px;top:163.14px" class="cls_023"><span class="cls_023">Arabian Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:7.58px;top:167.73px" class="cls_012"><span class="cls_012">Bevrigh Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:326.37px;top:204.11px" class="cls_038"><span class="cls_038">A- </span><span class="cls_037">Bhagnari</span></div>
+<div style="position:absolute;left:326.37px;top:209.91px" class="cls_038"><span class="cls_038">B- </span><span class="cls_037">Kundi</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed    Barki Breed</span></div>
+<div style="position:absolute;left:83.35px;top:214.95px" class="cls_012"><span class="cls_012">Brohi Breed</span></div>
+<div style="position:absolute;left:326.37px;top:215.71px" class="cls_038"><span class="cls_038">C-</span></div>
+<div style="position:absolute;left:334.73px;top:216.12px" class="cls_037"><span class="cls_037">Balochi and Dumbi</span></div>
+<div style="position:absolute;left:326.37px;top:221.52px" class="cls_038"><span class="cls_038">D- </span><span class="cls_037">Balochi, Lehri, Kamori and Teddi</span></div>
+<div style="position:absolute;left:191.49px;top:225.64px" class="cls_035"><span class="cls_035">Jhal</span></div>
+<div style="position:absolute;left:326.37px;top:227.32px" class="cls_038"><span class="cls_038">E-</span></div>
+<div style="position:absolute;left:334.73px;top:227.72px" class="cls_037"><span class="cls_037">Raidi and Brahvi</span></div>
+<div style="position:absolute;left:229.30px;top:232.66px" class="cls_017"><span class="cls_017">A- </span><span class="cls_023">Bhagnari and Cross Breed</span></div>
+<div style="position:absolute;left:326.37px;top:233.12px" class="cls_038"><span class="cls_038">F-</span></div>
+<div style="position:absolute;left:334.74px;top:233.52px" class="cls_037"><span class="cls_037">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:187.15px;top:234.65px" class="cls_035"><span class="cls_035">Magsi</span></div>
+<div style="position:absolute;left:229.30px;top:238.69px" class="cls_017"><span class="cls_017">B- </span><span class="cls_018">Kundi</span></div>
+<div style="position:absolute;left:229.30px;top:244.73px" class="cls_017"><span class="cls_017">C- </span><span class="cls_023">Balochi and Dumbi</span></div>
+<div style="position:absolute;left:322.08px;top:241.84px" class="cls_036"><span class="cls_036">Sohbatpur</span></div>
+<div style="position:absolute;left:148.04px;top:249.08px" class="cls_038"><span class="cls_038">A- </span><span class="cls_037">Bhagnari and Red Sindhi</span></div>
+<div style="position:absolute;left:229.30px;top:250.76px" class="cls_017"><span class="cls_017">D- </span><span class="cls_023">Balochi, Lehri, Kamori and Teddi</span></div>
+<div style="position:absolute;left:148.04px;top:254.88px" class="cls_038"><span class="cls_038">B-</span></div>
+<div style="position:absolute;left:156.40px;top:255.28px" class="cls_037"><span class="cls_037">Kundi</span></div>
+<div style="position:absolute;left:229.30px;top:256.79px" class="cls_017"><span class="cls_017">E- </span><span class="cls_023">Raidi and Brahvi</span></div>
+<div style="position:absolute;left:6.52px;top:261.94px" class="cls_012"><span class="cls_012">Rakhsan Breed    Teddi Breed   Balochi Breed</span></div>
+<div style="position:absolute;left:148.04px;top:260.68px" class="cls_038"><span class="cls_038">C-</span></div>
+<div style="position:absolute;left:156.40px;top:261.08px" class="cls_037"><span class="cls_037">Balochi and Dumbi</span></div>
+<div style="position:absolute;left:229.30px;top:262.82px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:237.99px;top:263.24px" class="cls_023"><span class="cls_023">Arabian Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:148.04px;top:266.49px" class="cls_038"><span class="cls_038">D- </span><span class="cls_037">Balochi, Lehri, Kamori and Teddi</span></div>
+<div style="position:absolute;left:148.04px;top:272.29px" class="cls_038"><span class="cls_038">E- </span><span class="cls_037">Raidi and Lassi</span></div>
+<div style="position:absolute;left:256.45px;top:274.64px" class="cls_038"><span class="cls_038">A- </span><span class="cls_037">Bhagnari and Cross Breed</span></div>
+<div style="position:absolute;left:148.04px;top:278.09px" class="cls_038"><span class="cls_038">F-</span></div>
+<div style="position:absolute;left:156.40px;top:278.49px" class="cls_037"><span class="cls_037">Arabian Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:256.45px;top:280.44px" class="cls_038"><span class="cls_038">B- </span><span class="cls_037">Kundi</span></div>
+<div style="position:absolute;left:256.45px;top:286.25px" class="cls_038"><span class="cls_038">C- </span><span class="cls_037">Balochi and Dumbi</span></div>
+<div style="position:absolute;left:256.45px;top:292.05px" class="cls_038"><span class="cls_038">D- </span><span class="cls_037">Balochi, Lehri, Kamori and Teddi</span></div>
+<div style="position:absolute;left:256.45px;top:297.85px" class="cls_038"><span class="cls_038">E- </span><span class="cls_037">Raidi and Brahvi</span></div>
+<div style="position:absolute;left:256.45px;top:303.66px" class="cls_038"><span class="cls_038">F-</span></div>
+<div style="position:absolute;left:264.82px;top:304.06px" class="cls_037"><span class="cls_037">Arabian Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:11.14px;top:309.94px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, BreedFriesian Cross</span></div>
+<div style="position:absolute;left:90.84px;top:315.25px" class="cls_012"><span class="cls_012">Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:1326px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background4.jpg" width=432 height=432></div>
+<div style="position:absolute;left:103.96px;top:9.18px" class="cls_031"><span class="cls_031">MEKRAN DIVISION</span></div>
+<div style="position:absolute;left:177.72px;top:77.28px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:177.72px;top:87.10px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:177.72px;top:96.92px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:177.72px;top:106.74px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:7.28px;top:117.46px" class="cls_012"><span class="cls_012">Friesian Cross</span></div>
+<div style="position:absolute;left:46.32px;top:117.46px" class="cls_012"><span class="cls_012">Kundi Breed</span></div>
+<div style="position:absolute;left:85.61px;top:117.46px" class="cls_012"><span class="cls_012">Neeli Ravi</span></div>
+<div style="position:absolute;left:17.71px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:177.72px;top:116.57px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:177.72px;top:126.39px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:263.57px;top:143.95px" class="cls_040"><span class="cls_040">Panjgur</span></div>
+<div style="position:absolute;left:301.54px;top:156.24px" class="cls_017"><span class="cls_017">A-</span></div>
+<div style="position:absolute;left:310.23px;top:156.66px" class="cls_023"><span class="cls_023">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:301.54px;top:162.27px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:310.23px;top:162.69px" class="cls_023"><span class="cls_023">Kundi</span></div>
+<div style="position:absolute;left:7.58px;top:167.73px" class="cls_012"><span class="cls_012">Bevrigh Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:301.54px;top:168.31px" class="cls_017"><span class="cls_017">C-</span></div>
+<div style="position:absolute;left:310.23px;top:168.73px" class="cls_023"><span class="cls_023">Balochi and Rakhshani</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:301.54px;top:174.34px" class="cls_017"><span class="cls_017">D-</span></div>
+<div style="position:absolute;left:310.23px;top:174.76px" class="cls_023"><span class="cls_023">Balochi and Khurasani</span></div>
+<div style="position:absolute;left:301.54px;top:180.37px" class="cls_017"><span class="cls_017">E-</span></div>
+<div style="position:absolute;left:310.23px;top:180.79px" class="cls_023"><span class="cls_023">Lassi And Kharani</span></div>
+<div style="position:absolute;left:301.54px;top:186.41px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:310.23px;top:186.83px" class="cls_023"><span class="cls_023">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:198.29px;top:194.67px" class="cls_040"><span class="cls_040">Kech</span></div>
+<div style="position:absolute;left:225.64px;top:203.64px" class="cls_017"><span class="cls_017">A-</span></div>
+<div style="position:absolute;left:234.33px;top:204.06px" class="cls_023"><span class="cls_023">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:225.64px;top:209.67px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:234.33px;top:210.09px" class="cls_023"><span class="cls_023">Kundi</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed</span></div>
+<div style="position:absolute;left:47.12px;top:214.95px" class="cls_012"><span class="cls_012">Barki Breed</span></div>
+<div style="position:absolute;left:83.35px;top:214.95px" class="cls_012"><span class="cls_012">Brohi Breed</span></div>
+<div style="position:absolute;left:225.64px;top:215.71px" class="cls_017"><span class="cls_017">C-</span></div>
+<div style="position:absolute;left:234.33px;top:216.12px" class="cls_023"><span class="cls_023">Balochi</span></div>
+<div style="position:absolute;left:225.64px;top:221.74px" class="cls_017"><span class="cls_017">D-</span></div>
+<div style="position:absolute;left:234.33px;top:222.16px" class="cls_023"><span class="cls_023">Balochi and Khurasani</span></div>
+<div style="position:absolute;left:225.64px;top:227.77px" class="cls_017"><span class="cls_017">E-</span></div>
+<div style="position:absolute;left:234.33px;top:228.19px" class="cls_023"><span class="cls_023">Lassi And Kharani</span></div>
+<div style="position:absolute;left:225.64px;top:233.81px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:234.33px;top:234.23px" class="cls_023"><span class="cls_023">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:193.84px;top:255.24px" class="cls_017"><span class="cls_017">A- </span><span class="cls_023">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:6.52px;top:261.94px" class="cls_012"><span class="cls_012">Rakhsan Breed</span></div>
+<div style="position:absolute;left:44.34px;top:261.94px" class="cls_012"><span class="cls_012">Haranai Breed</span></div>
+<div style="position:absolute;left:88.65px;top:262.11px" class="cls_012"><span class="cls_012">Poultry</span></div>
+<div style="position:absolute;left:148.60px;top:256.15px" class="cls_042"><span class="cls_042">Gwadar</span></div>
+<div style="position:absolute;left:193.84px;top:261.27px" class="cls_017"><span class="cls_017">B-</span></div>
+<div style="position:absolute;left:202.53px;top:261.69px" class="cls_023"><span class="cls_023">Kundi</span></div>
+<div style="position:absolute;left:193.84px;top:267.31px" class="cls_017"><span class="cls_017">C- </span><span class="cls_023">Balochi</span></div>
+<div style="position:absolute;left:193.84px;top:273.34px" class="cls_017"><span class="cls_017">D- </span><span class="cls_023">Balochi and Khurasani</span></div>
+<div style="position:absolute;left:193.84px;top:279.37px" class="cls_017"><span class="cls_017">E- </span><span class="cls_023">Lassi</span></div>
+<div style="position:absolute;left:193.84px;top:285.41px" class="cls_017"><span class="cls_017">F-</span></div>
+<div style="position:absolute;left:202.53px;top:285.83px" class="cls_023"><span class="cls_023">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:11.14px;top:310.98px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, Breed</span></div>
+<div style="position:absolute;left:90.84px;top:309.87px" class="cls_012"><span class="cls_012">Lassi</span></div>
+<div style="position:absolute;left:90.18px;top:315.18px" class="cls_012"><span class="cls_012">Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:1768px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background5.jpg" width=432 height=432></div>
+<div style="position:absolute;left:117.99px;top:9.42px" class="cls_044"><span class="cls_044">KALAT DIVISION</span></div>
+<div style="position:absolute;left:353.14px;top:63.90px" class="cls_050"><span class="cls_050">A- </span><span class="cls_049">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:353.14px;top:69.10px" class="cls_050"><span class="cls_050">B-</span></div>
+<div style="position:absolute;left:360.63px;top:69.46px" class="cls_049"><span class="cls_049">Kundi</span></div>
+<div style="position:absolute;left:153.04px;top:70.69px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:353.14px;top:74.30px" class="cls_050"><span class="cls_050">C-</span></div>
+<div style="position:absolute;left:360.63px;top:74.66px" class="cls_049"><span class="cls_049">Balochi  Harnai and Rakhshani</span></div>
+<div style="position:absolute;left:353.14px;top:79.49px" class="cls_050"><span class="cls_050">D-</span></div>
+<div style="position:absolute;left:360.63px;top:79.86px" class="cls_049"><span class="cls_049">Balochi   Lehri and Khurasani</span></div>
+<div style="position:absolute;left:153.04px;top:80.52px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:353.14px;top:84.69px" class="cls_050"><span class="cls_050">E-</span></div>
+<div style="position:absolute;left:360.63px;top:85.05px" class="cls_049"><span class="cls_049">Brahvi</span></div>
+<div style="position:absolute;left:353.14px;top:89.89px" class="cls_050"><span class="cls_050">F-</span></div>
+<div style="position:absolute;left:360.63px;top:90.25px" class="cls_049"><span class="cls_049">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:153.04px;top:90.34px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:153.04px;top:100.16px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:325.45px;top:102.54px" class="cls_053"><span class="cls_053">A-</span></div>
+<div style="position:absolute;left:331.99px;top:102.85px" class="cls_051"><span class="cls_051">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:325.45px;top:107.08px" class="cls_053"><span class="cls_053">B-</span></div>
+<div style="position:absolute;left:331.99px;top:107.39px" class="cls_051"><span class="cls_051">Kundi</span></div>
+<div style="position:absolute;left:325.45px;top:111.62px" class="cls_053"><span class="cls_053">C-</span></div>
+<div style="position:absolute;left:331.99px;top:111.94px" class="cls_051"><span class="cls_051">Balochi   and Rakhshani</span></div>
+<div style="position:absolute;left:153.04px;top:109.99px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:325.45px;top:116.16px" class="cls_053"><span class="cls_053">D-</span></div>
+<div style="position:absolute;left:331.99px;top:116.48px" class="cls_051"><span class="cls_051">Balochi   Lehri and Khurasani</span></div>
+<div style="position:absolute;left:7.28px;top:117.46px" class="cls_012"><span class="cls_012">Friesian Cross</span></div>
+<div style="position:absolute;left:46.32px;top:117.46px" class="cls_012"><span class="cls_012">Kundi Breed</span></div>
+<div style="position:absolute;left:84.56px;top:117.46px" class="cls_012"><span class="cls_012">Red Sindhi</span></div>
+<div style="position:absolute;left:325.45px;top:120.70px" class="cls_053"><span class="cls_053">E-</span></div>
+<div style="position:absolute;left:331.99px;top:121.02px" class="cls_051"><span class="cls_051">Lassi and Brahvi</span></div>
+<div style="position:absolute;left:17.71px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:153.04px;top:119.81px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:325.45px;top:125.24px" class="cls_053"><span class="cls_053">F-</span></div>
+<div style="position:absolute;left:332.00px;top:125.56px" class="cls_051"><span class="cls_051">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:7.58px;top:167.73px" class="cls_012"><span class="cls_012">Bevrigh Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed    Barki Breed</span></div>
+<div style="position:absolute;left:83.35px;top:214.95px" class="cls_012"><span class="cls_012">Brohi Breed</span></div>
+<div style="position:absolute;left:6.52px;top:261.28px" class="cls_012"><span class="cls_012">Rakhsan Breed  </span><span class="cls_039">   </span><span class="cls_012">Teddi</span><span class="cls_039"> </span><span class="cls_012">Goat </span><span class="cls_011">   Balochi Breed</span></div>
+<div style="position:absolute;left:11.14px;top:310.98px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, Breed</span></div>
+<div style="position:absolute;left:90.87px;top:309.87px" class="cls_012"><span class="cls_012">Lassi</span></div>
+<div style="position:absolute;left:90.22px;top:315.18px" class="cls_012"><span class="cls_012">Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:2210px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background6.jpg" width=432 height=432></div>
+<div style="position:absolute;left:83.78px;top:9.18px" class="cls_031"><span class="cls_031">RAKHSHAN DIVISION</span></div>
+<div style="position:absolute;left:338.94px;top:75.63px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:338.94px;top:85.45px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:338.94px;top:95.28px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:338.94px;top:105.10px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:7.28px;top:117.46px" class="cls_012"><span class="cls_012">Friesian Cross   Kundi Breed</span></div>
+<div style="position:absolute;left:85.61px;top:117.46px" class="cls_012"><span class="cls_012">Neeli Ravi</span></div>
+<div style="position:absolute;left:338.94px;top:114.92px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:17.71px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:338.94px;top:124.75px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:379.11px;top:150.13px" class="cls_061"><span class="cls_061">Nushki</span></div>
+<div style="position:absolute;left:366.84px;top:159.93px" class="cls_069"><span class="cls_069">A-</span></div>
+<div style="position:absolute;left:371.58px;top:160.16px" class="cls_067"><span class="cls_067">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:366.84px;top:163.22px" class="cls_069"><span class="cls_069">B-</span></div>
+<div style="position:absolute;left:371.58px;top:163.45px" class="cls_067"><span class="cls_067">Kundi</span></div>
+<div style="position:absolute;left:366.84px;top:166.51px" class="cls_069"><span class="cls_069">C-</span></div>
+<div style="position:absolute;left:371.58px;top:166.73px" class="cls_067"><span class="cls_067">Balochi   and Rakhshani</span></div>
+<div style="position:absolute;left:7.58px;top:167.73px" class="cls_012"><span class="cls_012">Bevrigh Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:366.84px;top:169.79px" class="cls_069"><span class="cls_069">D-</span></div>
+<div style="position:absolute;left:371.58px;top:170.02px" class="cls_067"><span class="cls_067">Balochi  and  Khurasani</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:366.84px;top:173.08px" class="cls_069"><span class="cls_069">E-</span></div>
+<div style="position:absolute;left:372.30px;top:173.31px" class="cls_067"><span class="cls_067">Kharani and Brahvi</span></div>
+<div style="position:absolute;left:193.15px;top:175.76px" class="cls_063"><span class="cls_063">A- </span><span class="cls_062">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:366.84px;top:176.36px" class="cls_069"><span class="cls_069">F-</span></div>
+<div style="position:absolute;left:371.58px;top:176.59px" class="cls_067"><span class="cls_067">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:193.15px;top:181.71px" class="cls_063"><span class="cls_063">B- </span><span class="cls_062">Kundi</span></div>
+<div style="position:absolute;left:287.61px;top:173.47px" class="cls_060"><span class="cls_060">Chagai</span></div>
+<div style="position:absolute;left:193.15px;top:187.66px" class="cls_063"><span class="cls_063">C- </span><span class="cls_062">Balochi   and Rakhshani</span></div>
+<div style="position:absolute;left:193.15px;top:193.60px" class="cls_063"><span class="cls_063">D- </span><span class="cls_062">Balochi   Khurasani and Barbari</span></div>
+<div style="position:absolute;left:193.15px;top:199.55px" class="cls_063"><span class="cls_063">E- </span><span class="cls_062">Kharani</span></div>
+<div style="position:absolute;left:350.72px;top:199.60px" class="cls_071"><span class="cls_071">A-</span></div>
+<div style="position:absolute;left:356.76px;top:199.89px" class="cls_070"><span class="cls_070">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:350.72px;top:203.79px" class="cls_071"><span class="cls_071">B-</span></div>
+<div style="position:absolute;left:356.76px;top:204.08px" class="cls_070"><span class="cls_070">Kundi</span></div>
+<div style="position:absolute;left:193.15px;top:205.50px" class="cls_063"><span class="cls_063">F-</span></div>
+<div style="position:absolute;left:201.73px;top:205.92px" class="cls_062"><span class="cls_062">Balochi</span></div>
+<div style="position:absolute;left:350.72px;top:207.97px" class="cls_071"><span class="cls_071">C- </span><span class="cls_070">Balochi   and Rakhshani</span></div>
+<div style="position:absolute;left:350.72px;top:212.16px" class="cls_071"><span class="cls_071">D- </span><span class="cls_070">Balochi Lehri and  Khurasani</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed    Barki Breed</span></div>
+<div style="position:absolute;left:83.35px;top:214.95px" class="cls_012"><span class="cls_012">Brohi Breed</span></div>
+<div style="position:absolute;left:350.72px;top:216.35px" class="cls_071"><span class="cls_071">E-</span></div>
+<div style="position:absolute;left:357.67px;top:216.64px" class="cls_070"><span class="cls_070">Kharani and Brahvi</span></div>
+<div style="position:absolute;left:350.72px;top:220.54px" class="cls_071"><span class="cls_071">F-</span></div>
+<div style="position:absolute;left:356.76px;top:220.83px" class="cls_070"><span class="cls_070">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:262.80px;top:225.98px" class="cls_060"><span class="cls_060">Washuk</span></div>
+<div style="position:absolute;left:259.53px;top:243.63px" class="cls_065"><span class="cls_065">A- </span><span class="cls_064">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:259.53px;top:249.16px" class="cls_065"><span class="cls_065">B- </span><span class="cls_064">Kundi</span></div>
+<div style="position:absolute;left:259.53px;top:254.69px" class="cls_065"><span class="cls_065">C- </span><span class="cls_064">Balochi   and Rakhshani</span></div>
+<div style="position:absolute;left:6.52px;top:261.94px" class="cls_012"><span class="cls_012">Rakhsan Breed</span></div>
+<div style="position:absolute;left:46.53px;top:262.85px" class="cls_007"><span class="cls_007">Balochi Breed</span></div>
+<div style="position:absolute;left:88.65px;top:262.11px" class="cls_012"><span class="cls_012">Poultry</span></div>
+<div style="position:absolute;left:259.53px;top:260.22px" class="cls_065"><span class="cls_065">D-</span></div>
+<div style="position:absolute;left:267.51px;top:260.61px" class="cls_064"><span class="cls_064">Balochi and  Khurasani</span></div>
+<div style="position:absolute;left:259.53px;top:265.75px" class="cls_065"><span class="cls_065">E- </span><span class="cls_064">Kharani and Brahvi</span></div>
+<div style="position:absolute;left:259.53px;top:271.28px" class="cls_065"><span class="cls_065">F-</span></div>
+<div style="position:absolute;left:267.51px;top:271.67px" class="cls_064"><span class="cls_064">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:11.14px;top:310.98px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, Breed</span></div>
+<div style="position:absolute;left:88.11px;top:309.87px" class="cls_012"><span class="cls_012">Kharani</span></div>
+<div style="position:absolute;left:90.23px;top:315.18px" class="cls_012"><span class="cls_012">Breed</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-216px;top:2652px;width:432px;height:432px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_id_15e3ffd6-bd5d-11eb-a980-0cc47a792c0a_files/background7.jpg" width=432 height=432></div>
+<div style="position:absolute;left:130.10px;top:9.18px" class="cls_031"><span class="cls_031">SIBI DIVISION</span></div>
+<div style="position:absolute;left:338.94px;top:75.63px" class="cls_009"><span class="cls_009">A-  Cattle</span></div>
+<div style="position:absolute;left:338.94px;top:85.45px" class="cls_009"><span class="cls_009">B-  Buffalos</span></div>
+<div style="position:absolute;left:144.78px;top:95.96px" class="cls_085"><span class="cls_085">A-</span></div>
+<div style="position:absolute;left:150.24px;top:96.22px" class="cls_084"><span class="cls_084">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:144.78px;top:99.74px" class="cls_085"><span class="cls_085">B-</span></div>
+<div style="position:absolute;left:150.24px;top:100.00px" class="cls_084"><span class="cls_084">Kundi</span></div>
+<div style="position:absolute;left:338.94px;top:95.28px" class="cls_009"><span class="cls_009">C-  Sheep</span></div>
+<div style="position:absolute;left:144.78px;top:103.53px" class="cls_085"><span class="cls_085">C- </span><span class="cls_084">Harni And Bevrigh</span></div>
+<div style="position:absolute;left:144.78px;top:107.31px" class="cls_085"><span class="cls_085">D-</span></div>
+<div style="position:absolute;left:150.24px;top:107.57px" class="cls_084"><span class="cls_084">Khrasani and Barbari</span></div>
+<div style="position:absolute;left:144.78px;top:111.10px" class="cls_085"><span class="cls_085">E-</span></div>
+<div style="position:absolute;left:150.24px;top:111.36px" class="cls_084"><span class="cls_084">Kohi and Raidi</span></div>
+<div style="position:absolute;left:338.94px;top:105.10px" class="cls_009"><span class="cls_009">D-  Goats</span></div>
+<div style="position:absolute;left:144.78px;top:114.88px" class="cls_085"><span class="cls_085">F-</span></div>
+<div style="position:absolute;left:150.24px;top:115.15px" class="cls_084"><span class="cls_084">Cross Breed</span></div>
+<div style="position:absolute;left:14.99px;top:117.46px" class="cls_012"><span class="cls_012">Bagnari</span></div>
+<div style="position:absolute;left:46.32px;top:117.46px" class="cls_012"><span class="cls_012">Kundi Breed</span></div>
+<div style="position:absolute;left:85.61px;top:117.46px" class="cls_012"><span class="cls_012">Neeli Ravi</span></div>
+<div style="position:absolute;left:338.94px;top:114.92px" class="cls_009"><span class="cls_009">E-  Camels</span></div>
+<div style="position:absolute;left:90.23px;top:122.76px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:188.51px;top:124.96px" class="cls_078"><span class="cls_078">A-</span></div>
+<div style="position:absolute;left:192.85px;top:125.17px" class="cls_077"><span class="cls_077">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:188.51px;top:127.97px" class="cls_078"><span class="cls_078">B-</span></div>
+<div style="position:absolute;left:192.85px;top:128.18px" class="cls_077"><span class="cls_077">Kundi</span></div>
+<div style="position:absolute;left:188.51px;top:130.99px" class="cls_078"><span class="cls_078">C-</span></div>
+<div style="position:absolute;left:192.85px;top:131.20px" class="cls_077"><span class="cls_077">Harni And Bevrigh</span></div>
+<div style="position:absolute;left:338.94px;top:124.75px" class="cls_009"><span class="cls_009">F-  Horses</span></div>
+<div style="position:absolute;left:188.51px;top:134.00px" class="cls_078"><span class="cls_078">D- </span><span class="cls_077">Khrasani and Kamori</span></div>
+<div style="position:absolute;left:188.51px;top:137.01px" class="cls_078"><span class="cls_078">E- </span><span class="cls_077">Raidi</span></div>
+<div style="position:absolute;left:188.51px;top:140.03px" class="cls_078"><span class="cls_078">F-</span></div>
+<div style="position:absolute;left:193.51px;top:140.24px" class="cls_077"><span class="cls_077">Balochi and Cross Breed</span></div>
+<div style="position:absolute;left:168.54px;top:157.80px" class="cls_083"><span class="cls_083">A- </span><span class="cls_082">Bagnari</span></div>
+<div style="position:absolute;left:168.54px;top:161.22px" class="cls_083"><span class="cls_083">B- </span><span class="cls_082">Kundi and Neeeli Ravi</span></div>
+<div style="position:absolute;left:168.54px;top:164.65px" class="cls_083"><span class="cls_083">C- </span><span class="cls_082">Balochi   and Harnai</span></div>
+<div style="position:absolute;left:7.58px;top:167.73px" class="cls_012"><span class="cls_012">Bevrigh Breed</span></div>
+<div style="position:absolute;left:48.84px;top:166.70px" class="cls_012"><span class="cls_012">Khurasani</span></div>
+<div style="position:absolute;left:83.75px;top:167.70px" class="cls_012"><span class="cls_012">Raidi Breed</span></div>
+<div style="position:absolute;left:168.54px;top:168.07px" class="cls_083"><span class="cls_083">D-</span></div>
+<div style="position:absolute;left:173.48px;top:168.31px" class="cls_082"><span class="cls_082">Lehri , Kamori and Teddi</span></div>
+<div style="position:absolute;left:168.54px;top:171.49px" class="cls_083"><span class="cls_083">E-</span></div>
+<div style="position:absolute;left:173.48px;top:171.73px" class="cls_082"><span class="cls_082">Raidi and Brahvi</span></div>
+<div style="position:absolute;left:53.73px;top:172.01px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:168.54px;top:174.92px" class="cls_083"><span class="cls_083">F-</span></div>
+<div style="position:absolute;left:173.48px;top:175.15px" class="cls_082"><span class="cls_082">Arabian and Balochi</span></div>
+<div style="position:absolute;left:286.82px;top:175.10px" class="cls_081"><span class="cls_081">Kohlu</span></div>
+<div style="position:absolute;left:276.93px;top:194.70px" class="cls_050"><span class="cls_050">A- </span><span class="cls_049">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:276.93px;top:199.90px" class="cls_050"><span class="cls_050">B- </span><span class="cls_049">Kundi and Neeli Ravi</span></div>
+<div style="position:absolute;left:276.93px;top:205.10px" class="cls_050"><span class="cls_050">C- </span><span class="cls_049">Balochi and  Harnai</span></div>
+<div style="position:absolute;left:276.93px;top:210.30px" class="cls_050"><span class="cls_050">D- </span><span class="cls_049">Lehri, kamori and Teddi</span></div>
+<div style="position:absolute;left:8.11px;top:214.95px" class="cls_012"><span class="cls_012">Barbari Breed    Barki Breed</span></div>
+<div style="position:absolute;left:83.35px;top:214.95px" class="cls_012"><span class="cls_012">Brohi Breed</span></div>
+<div style="position:absolute;left:276.93px;top:215.49px" class="cls_050"><span class="cls_050">E-</span></div>
+<div style="position:absolute;left:284.43px;top:215.85px" class="cls_049"><span class="cls_049">Kohi and Raidi</span></div>
+<div style="position:absolute;left:276.93px;top:220.69px" class="cls_050"><span class="cls_050">F-</span></div>
+<div style="position:absolute;left:284.43px;top:221.05px" class="cls_049"><span class="cls_049">Arabian and Balochi</span></div>
+<div style="position:absolute;left:311.65px;top:236.82px" class="cls_081"><span class="cls_081">Dera</span></div>
+<div style="position:absolute;left:309.86px;top:249.44px" class="cls_081"><span class="cls_081">Bugti</span></div>
+<div style="position:absolute;left:14.99px;top:261.94px" class="cls_012"><span class="cls_012">Bevrigh</span></div>
+<div style="position:absolute;left:48.22px;top:261.94px" class="cls_012"><span class="cls_012">Teddi Goat</span></div>
+<div style="position:absolute;left:80.41px;top:260.74px" class="cls_012"><span class="cls_012">Friesian Cross</span></div>
+<div style="position:absolute;left:90.84px;top:266.05px" class="cls_012"><span class="cls_012">Breed</span></div>
+<div style="position:absolute;left:301.83px;top:270.90px" class="cls_050"><span class="cls_050">A- </span><span class="cls_049">Friesian Cross Breed</span></div>
+<div style="position:absolute;left:301.83px;top:276.10px" class="cls_050"><span class="cls_050">B- </span><span class="cls_049">Kundi and Neeli Ravi</span></div>
+<div style="position:absolute;left:301.83px;top:281.30px" class="cls_050"><span class="cls_050">C- </span><span class="cls_049">Balochi Bevrigh and  Harnai</span></div>
+<div style="position:absolute;left:301.83px;top:286.50px" class="cls_050"><span class="cls_050">D- </span><span class="cls_049">Lehri, kamori and Teddi</span></div>
+<div style="position:absolute;left:301.83px;top:291.69px" class="cls_050"><span class="cls_050">E-</span><span class="cls_046">  </span><span class="cls_049">Kohi</span><span class="cls_046"> </span><span class="cls_049">and</span><span class="cls_046"> </span><span class="cls_049">Raidi</span></div>
+<div style="position:absolute;left:301.83px;top:296.89px" class="cls_050"><span class="cls_050">F-</span></div>
+<div style="position:absolute;left:309.33px;top:297.25px" class="cls_049"><span class="cls_049">Balochi and Cress Breed</span></div>
+<div style="position:absolute;left:11.14px;top:310.98px" class="cls_012"><span class="cls_012">Kohi Breed    Kamori, Breed</span></div>
+<div style="position:absolute;left:89.52px;top:309.87px" class="cls_012"><span class="cls_012">Harnai</span></div>
+</div>
+
+</body>
+</html>

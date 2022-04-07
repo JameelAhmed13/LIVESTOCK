@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Search";
+}
+@section Styles {
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/libs/datatables/css/dataTables.bootstrap.min.css">
+}
+<div style="margin:20px">
+    <h4 style="font-weight:bold">Search Patient</h4>
+    <form id="myform" autocomplete="off">
+        <label>Search By:</label>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <input id="name" name="searchby" type="radio" value="Name" checked />
+                    <label>Name</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <input id="cnic" name="searchby" type="radio" value="CNIC" />
+                    <label>CNIC</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <input id="code" name="searchby" type="radio" value="Code" />
+                    <label>Code</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input id="fathername" name="searchby" type="radio" value="Father/Hasband Name" />
+                    <label>Father/Husband Name</label>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input id="searchvalue" name="searchvalue" type="text" placeholder="Enter Name" />
+                    <input class="btn btn-success btn-sm" style="margin-bottom:4px;padding-top:3px" type="button" onclick="getSearchData()" value="Search" />
+                </div>
+            </div>
+            <div class='col-md-1' style="padding:0" id="divLoading">
+                <img src="~/img/sspinner.gif" width="34" height="34" />
+            </div>
+            <div class='col-md-2'>
+                <div style="font-size:10px; font-style:italic;margin-top:10px">Display top 10 results only!</div>
+            </div>
+            <div class="col-md-7"></div>
+        </div>
+
+        <div class="row">
+            <div>
+                <div id="dynamicContentContainer"></div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //$('#searchvalue').focus();
+            $("#divLoading").hide();
+            $("input[name=searchby]").on("change", function () {
+                //alert($("input[name=searchby]:checked").val());
+                var value = $("input[name=searchby]:checked").val();
+                $("#searchvalue").attr('placeholder', 'Enter ' + value);
+                $('#searchvalue').val('');
+                if (value == "Name" || value == "Father Name") {
+                    $("#searchvalue").attr('type', 'text');
+                } else {
+                    $("#searchvalue").attr('type', 'number');
+                }
+                $('#searchvalue').focus();
+            });
+        })
+
+        function getSearchData() {
+            var val = document.getElementById("searchvalue").value;
+            var searchby = $("input[name=searchby]:checked").val();
+            $("#divLoading").show();
+             $.get('@Url.Action("SearchedPatient", "PatientResults", new { Area = "CovidLab" })', { text: val, searchTo: searchby }, function (content) {
+                    $("#dynamicContentContainer").html(content);
+                    $("#divLoading").hide();
+            });
+        }
+    </script>
+}

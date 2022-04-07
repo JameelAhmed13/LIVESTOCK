@@ -1,0 +1,50 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Styles{ 
+
+}
+<div class="box-header with-border">
+    <div class="col-lg-9">
+        <h4 class="text-center" style="font-weight:bold">Dashboard: Covid-19 Lab Summary Report</h4>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label class="control-label">Select Lab</label>
+            <select class="form-control" asp-items="ViewBag.LabID"></select>
+        </div>
+    </div>
+    <div class='col-md-1' style="padding-top:20px" id="divLoading">
+        <img src="~/img/sspinner.gif" width="45" height="40" />
+    </div>
+
+</div>
+<div id="dynamicContentContainer"></div>
+
+@section Scripts {
+    <!-- DataTables -->
+    <!-- page script -->
+    <script>
+        $(document).ready(function () {
+            var labid = $("#LabID").val();
+            $.get('@Url.Action("Dashboard")?labID=' + labid, function (content) {
+            $("#dynamicContentContainer").html(content);
+            $("#divLoading").hide();
+        });
+        })
+
+
+        $('#LabID').change(function () {
+            var labid = $(this).val();
+            $("#divLoading").show();
+            $.get('@Url.Action("Dashboard")?labID=' + labid , function (content) {
+                $("#dynamicContentContainer").html(content);
+                $("#divLoading").hide();
+            });
+        });
+    </script>
+}
+

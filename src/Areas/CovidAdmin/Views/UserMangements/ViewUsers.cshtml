@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "ViewUsers";
+}
+
+<div style="margin:20px">
+    <h4 style="font-weight:bold" class="text-center">Lab User Management</h4>
+    <a asp-action="Create" asp-route-id="@ViewBag.LabID">Register New User</a>
+    <div id="dynamicContentContainer" style="margin:15px"></div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            $.get('@Url.Action("Index", "UserMangements",new{id=@ViewBag.LabID})', function (content) {
+                $("#dynamicContentContainer").html(content);
+                $("#divLoading").hide();
+            });
+        });
+    </script>
+
+}
+
+

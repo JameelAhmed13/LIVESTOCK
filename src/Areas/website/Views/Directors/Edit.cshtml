@@ -1,0 +1,74 @@
+﻿@model LIVESTOCK.Areas.website.Models.Director
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/website/Views/Shared/_LayoutWebadmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Director</h4>
+<hr />
+<div class="row" style="">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DirectorID" />
+            <div class="form-group">
+                <label asp-for="HeadName" class="control-label"></label>
+                <input asp-for="HeadName" class="form-control" />
+                <span asp-validation-for="HeadName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" />
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedOn" class="control-label"></label>
+                <input asp-for="CreatedOn" class="form-control" />
+                <span asp-validation-for="CreatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" id="jdr" asp-for="Description" />
+                <div id="description">
+                    @Html.Raw(Model.Description)
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/web/lib/jquery/dist/jquery.js"></script>
+    <script src="~/libs/jquery/jquery.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script>
+        let jdQuill = new Quill('#description', {
+            theme: 'snow'
+        });
+        $("form").submit(function () {
+            console.info('handleSubmit called');
+            document.getElementById('jdr').value = jdQuill.root.innerHTML;
+            alert("Yes");
+        });
+    </script>
+}

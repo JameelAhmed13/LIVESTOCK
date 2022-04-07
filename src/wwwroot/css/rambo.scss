@@ -1,0 +1,243 @@
+
+
+#flag-container {
+  font-size: 6em;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  background-position-x: 0;
+  background-position-y: 0;
+  background-size: 200% 100%;
+  
+  // for the example of text shadow
+  // text is transparent to get text clipped gradient
+  // text-shadow: 0 0 2px black;
+  
+  animation-name: whoosh;
+  animation-duration: 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+html, body, #background {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+$picker-width: 40px;
+
+#picker {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: $picker-width;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2px;
+  
+  & button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+}
+
+@keyframes whoosh {
+  0% { background-position-x: 0 }
+  100% { background-position-x: 100% }
+}
+
+@mixin flag-gradient($direction: null, $color-stops...) {
+  $grads: $color-stops;
+  @each $stop in $color-stops {
+    $grads: append($grads, $stop);
+  }
+  $grads: append($grads, nth(nth($grads, 1), 1));
+  
+  @if $direction == null {
+    $direction: 75deg;
+    @media only screen and  (max-width : 800px) {
+      $direction: 80deg;
+    }
+    @media only screen and  (max-width : 500px) {
+      $direction: 90deg;
+    }
+  }
+  
+  background-image: linear-gradient($direction, $grads);
+}
+
+$background-map: (
+  light-cool: #ecf0f1,
+  light-warm: #f2eded,
+  dark-cool: #10181e,
+  dark-warm: #0e070a,
+);
+
+@function get-opposite-tone($tone) {
+  @if $tone == 'light' {
+    @return 'dark';
+  }
+  @return 'light';
+}
+
+@mixin set-background($tone: 'light', $temp: 'cool') {
+  $primary: null;
+  $secondary: null;
+  
+  background-color: map-get($background-map, #{$tone}-#{$temp});
+  & > #picker > button {
+    background-color: map-get($background-map,
+      #{get-opposite-tone($tone)}-#{$temp}
+    );
+    &.highlight {
+      @if $tone == 'light' {
+        background-color: lighten(map-get($background-map,
+        #{get-opposite-tone($tone)}-#{$temp}
+      ), 12);
+      } @else {
+        background-color: darken(map-get($background-map,
+          #{get-opposite-tone($tone)}-#{$temp}
+        ), 24);
+      }
+    }
+    color: map-get($background-map, #{$tone}-#{$temp});
+  }
+  
+  padding-left: $picker-width;
+  transition: all 100ms ease-in-out;
+}
+
+.rainbow, .gay-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      red, 
+      orange, 
+      yellow, 
+      green, 
+      blue, 
+      purple
+     );
+  }
+  
+  &#background {
+    @include set-background('light', 'warm');
+  }
+}
+
+.trans-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      #5BCEFA, 
+      #F5A9B8, 
+      white, 
+      #F5A9B8, 
+      #5BCEFA
+     );
+  }
+  
+  &#background {
+    @include set-background('dark', 'cool');
+  }
+}
+
+.bi-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      magenta,
+      magenta,
+      purple,
+      blue,
+      blue
+     );
+  }
+  
+  &#background {
+    @include set-background('light', 'warm');
+  }
+}
+
+.ace-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      black,
+      #a3a3a3,
+      white,
+      purple
+     );
+  }
+  
+  &#background {
+    @include set-background('dark', 'cool');
+  }
+}
+
+.nb-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      #FFF430,
+      white,
+      #9C59D1,
+      black
+     );
+  }
+  
+  &#background {
+    @include set-background('dark', 'cool');
+  }
+}
+
+.pan-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      #ff218c,
+      #ffd800,
+      #21b1ff
+     );
+  }
+  
+  &#background {
+    @include set-background('light', 'cool');
+  }
+}
+
+.lipstick-lesbian-pride {
+  & > #flag-container {
+    @include flag-gradient(
+      null, 
+      #8A1E04,
+      #C54E54,
+      #E4ACCF,
+      #EDEDEB,
+      #D063A6,
+      #B75592,
+      #A40061,
+     );
+  }
+  
+  &#background {
+    @include set-background('dark', 'warm');
+  }
+}
+
+

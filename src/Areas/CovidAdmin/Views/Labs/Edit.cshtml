@@ -1,0 +1,67 @@
+﻿@model LIVESTOCK.Areas.CovidLab.Models.Lab
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div style="margin:20px">
+    <form asp-action="Edit">
+        <h4 class="text-center" style="font-weight:bold;margin-bottom:10px">Update Lab Form</h4>
+        <div class="row">
+        
+                <div class="col-md-3">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="LabID" type="hidden" />
+                    <div class="form-group">
+                        <label asp-for="DistrictID" class="control-label"></label>
+                        <select asp-for="DistrictID" class="form-control" asp-items="ViewBag.DistrictID"></select>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="ContactNo" class="control-label"></label>
+                        <input asp-for="ContactNo" class="form-control" />
+                        <span asp-validation-for="ContactNo" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="MobileNo" class="control-label"></label>
+                        <input asp-for="MobileNo" class="form-control" />
+                        <span asp-validation-for="MobileNo" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group" style="margin-top:25px">
+                        <input type="submit" value="Update" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+</form>
+</div>
+<div style="margin:20px">
+    <a asp-action="Create">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
